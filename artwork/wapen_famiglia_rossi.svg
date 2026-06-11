@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 130" width="440" height="520">
+  <path d="M55 6 L96 18 L96 62 Q96 100 55 124 Q14 100 14 62 L14 18 Z" fill="#1c0d0f" stroke="#8e2030" stroke-width="2.5"/>
+  <path d="M55 6 L96 18 L96 62 Q96 100 55 124 Q14 100 14 62 L14 18 Z" fill="none" stroke="#c9962b" stroke-width="1" transform="translate(55,65) scale(.92) translate(-55,-65)"/>
+  <path d="M44 38 L66 38 Q66 52 58 56 L58 68 L64 72 L46 72 L52 68 L52 56 Q44 52 44 38 Z" fill="none" stroke="#c9962b" stroke-width="2"/>
+  <path d="M46 41 L64 41 Q64 50 57 53 L53 53 Q46 50 46 41 Z" fill="#8e2030"/>
+  <circle cx="55" cy="88" r="3" fill="#8e2030"/><circle cx="44" cy="84" r="2" fill="#8e2030" opacity=".7"/><circle cx="66" cy="84" r="2" fill="#8e2030" opacity=".7"/>
+  <text x="55" y="106" text-anchor="middle" font-family="Cinzel,Georgia,serif" font-size="9" fill="#c9962b" letter-spacing="2">ROSSI</text>
+  <text x="55" y="118" text-anchor="middle" font-family="Cinzel,Georgia,serif" font-size="6" fill="#8a6820" letter-spacing="1.5">DE VERGIFTIGERS</text>
+</svg>

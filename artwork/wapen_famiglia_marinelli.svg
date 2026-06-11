@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 130" width="440" height="520">
+  <path d="M55 6 L96 18 L96 62 Q96 100 55 124 Q14 100 14 62 L14 18 Z" fill="#0d1420" stroke="#274a6d" stroke-width="2.5"/>
+  <path d="M55 6 L96 18 L96 62 Q96 100 55 124 Q14 100 14 62 L14 18 Z" fill="none" stroke="#c9962b" stroke-width="1" transform="translate(55,65) scale(.92) translate(-55,-65)"/>
+  <circle cx="55" cy="36" r="6" fill="none" stroke="#c9962b" stroke-width="2.4"/>
+  <line x1="55" y1="42" x2="55" y2="82" stroke="#c9962b" stroke-width="2.4"/>
+  <line x1="42" y1="52" x2="68" y2="52" stroke="#c9962b" stroke-width="2.4"/>
+  <path d="M35 70 Q38 84 55 84 Q72 84 75 70 L68 72 Q66 78 55 78 Q44 78 42 72 Z" fill="#c9962b"/>
+  <path d="M30 92 Q40 87 50 92 Q60 97 70 92 Q76 89 82 92" fill="none" stroke="#274a6d" stroke-width="2"/>
+  <text x="55" y="106" text-anchor="middle" font-family="Cinzel,Georgia,serif" font-size="8" fill="#c9962b" letter-spacing="1.5">MARINELLI</text>
+  <text x="55" y="118" text-anchor="middle" font-family="Cinzel,Georgia,serif" font-size="6" fill="#8a6820" letter-spacing="1.5">DE SMOKKELAARS</text>
+</svg>
