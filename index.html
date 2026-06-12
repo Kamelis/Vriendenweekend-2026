@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>La Famiglia — Vriendenweekend 2026</title>
+<title>La Famiglia - Vriendenweekend 2026</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=IM+Fell+English:ital@0;1&display=swap');
 
@@ -440,8 +440,8 @@ footer .d{color:var(--gold-dd);letter-spacing:8px;margin-top:8px}
     </svg>
 
     <h1>LA FAMIGLIA</h1>
-    <div class="sub">Vriendenweekend · 12 – 14 Giugno 2026</div>
-    <div class="motto">"Un amico che conosce i tuoi segreti vale più di tutti i tuoi nemici." — Don Massimo</div>
+    <div class="sub">Vriendenweekend · 12 - 14 Giugno 2026</div>
+    <div class="motto">"Un amico che conosce i tuoi segreti vale più di tutti i tuoi nemici." - Don Massimo</div>
     <div class="countdown" id="countdown"></div>
   </div>
 
@@ -461,14 +461,14 @@ footer .d{color:var(--gold-dd);letter-spacing:8px;margin-top:8px}
       <h3>Sabato</h3>
       <div class="nick">La Battaglia &amp; Il Gran Casinò</div>
       <div class="quote">Smokkelspel · Paardenrace · Pulled pork · Familiefoto · Casino Night · Kroning Il Capo dei Capi</div>
-      <div class="meta"><b>Avond:</b> maffia chique — pak · hoed · bretels · jurk · handschoenen</div>
+      <div class="meta"><b>Avond:</b> maffia chique - pak · hoed · bretels · jurk · handschoenen</div>
     </div>
     <div class="famcard" onclick="goDay(2)">
       <svg class="crest" viewBox="0 0 110 130"><use href="#icon-sun"/></svg>
       <h3>Domenica</h3>
       <div class="nick">L'Arrivederci</div>
       <div class="quote">Laatste ontbijt · Aanwijzing volgende organisatie · Opruimen met eer</div>
-      <div class="meta"><b>Motto:</b> alles wat begint, moet ook eindigen — ma non per sempre</div>
+      <div class="meta"><b>Motto:</b> alles wat begint, moet ook eindigen - ma non per sempre</div>
     </div>
   </div>
 </section>
@@ -500,7 +500,7 @@ footer .d{color:var(--gold-dd);letter-spacing:8px;margin-top:8px}
   <div class="page-head">
     <div class="eyebrow">Sabato · 15:00 · Het Renveld</div>
     <h2>La Corsa dei Cavalli</h2>
-    <div class="tagline">Zes manches op edele stokpaarden. Wed verstandig — de bookmaker wint altijd, behalve van een famiglia met lef.</div>
+    <div class="tagline">Zes manches op edele stokpaarden. Wed verstandig - de bookmaker wint altijd, behalve van een famiglia met lef.</div>
   </div>
   <div id="raceList"></div>
 </section>
@@ -611,19 +611,19 @@ footer .d{color:var(--gold-dd);letter-spacing:8px;margin-top:8px}
 
 <script>
 /* ════════════════════════════════════════════════
-   VIDEO-KOPPELINGEN — vul hier later de links in.
+   VIDEO-KOPPELINGEN - vul hier later de links in.
    Bijv: 'videos/video1.mp4' of een YouTube-embed-URL.
    Leeg = placeholder-melding.
 ════════════════════════════════════════════════ */
 const VIDEO_LINKS = {
-  v1: '',   // Video 1 — De Ontdekking
-  v2: '',   // Video 2 — De Verdachten
-  v3: '',   // Video 3 — Start het Onderzoek
-  v4: '',   // Video 4 — De Onthulling
+  v1: '',   // Video 1 - De Ontdekking
+  v2: '',   // Video 2 - De Verdachten
+  v3: '',   // Video 3 - Start het Onderzoek
+  v4: '',   // Video 4 - De Onthulling
   teaser1: '', teaser2: '', teaser3: '', teaser4: ''
 };
 
-const ORG_KEY = 'b21lcnRh'; /* codewoord — base64 */
+const ORG_KEY = 'b21lcnRhIQ=='; /* codewoord - base64 */
 let orgMode = false;
 
 /* ════════════ HULPJES ════════════ */
@@ -635,7 +635,7 @@ function videoHtml(vids, note){
     <button class="vidcard" onclick="playVideo('${v.key}','${v.titel.replace(/'/g,"\\'")}')">
       <div class="thumb"><div class="play">▶</div></div>
       <div class="vt">${v.nr}</div>
-      <div class="vs">${v.titel}${v.sub?' — '+v.sub:''}</div>
+      <div class="vs">${v.titel}${v.sub?' - '+v.sub:''}</div>
     </button>`).join('') + `</div>
     <p class="vidnote">${note||'Koppel de bestanden via VIDEO_LINKS bovenin het bestand (USB-backup niet vergeten!).'}</p>`;
 }
@@ -646,9 +646,9 @@ const DAYS = [
   id:'ven', tab:'Venerdì', tabSub:'vr 12 giugno', title:'Venerdì',
   sub:"La Serata dell'Omicidio", dress:'Dresscode: casual met accenten in jouw familiekleur',
   items:[
-  {time:'18:00', icon:'🚗', hl:true, title:'Aankomst der Families', sub:'Arrivo in stijl — themakledij verplicht. Elke famiglia meldt zich bij de poort van Villa Brabante Sentimento.',
+  {time:'18:00', icon:'🚗', hl:true, title:'Aankomst der Families', sub:'Arrivo in stijl - themakledij verplicht. Elke famiglia meldt zich bij de poort van Villa Brabante Sentimento.',
    uitleg:`<h4>Wat je moet weten</h4>
-     <p>Kom <em>in karakter</em> aan: casual kleding met duidelijke accenten in je familiekleur. Je kapitein wijst je je plek. Breng je paradepaard (stokpaard) mee — die heb je zaterdag nodig op het renveld.</p>
+     <p>Kom <em>in karakter</em> aan: casual kleding met duidelijke accenten in je familiekleur. Je kapitein wijst je je plek. Breng je paradepaard (stokpaard) mee - die heb je zaterdag nodig op het renveld.</p>
      <p>Elke famiglia heeft een eigen tafel met aankleding in familiekleur. Zoek je famiglia, installeer je, en hou je ogen open. <em>In deze villa heeft alles betekenis.</em></p>`,
    taken:`<h4>Voorbereiding (vrijdagmiddag)</h4><ul>
      <li>Stoel en tafel met aankleding klaarzetten voor Don Massimo ${wie('Allen')}</li>
@@ -683,12 +683,12 @@ const DAYS = [
      <li>Frietpan + snacks + theedoeken ${wie('Ralf')}</li>
      <li>Drank check ${wie('Kim')}</li></ul>`},
   {section:"Il Gioco dell'Omicidio"},
-  {time:'20:00', icon:'🎬', hl:true, title:'De Dood van Don Massimo — Moordspel', sub:'Italië, 1965. De peetvader is dood aangetroffen in de keuken. Vier verdachten. Vier families. Eén moordenaar.', badges:['video-gestuurd','±2 uur','draaiboek 🔒'],
+  {time:'20:00', icon:'🎬', hl:true, title:'De Dood van Don Massimo - Moordspel', sub:'Italië, 1965. De peetvader is dood aangetroffen in de keuken. Vier verdachten. Vier families. Eén moordenaar.', badges:['video-gestuurd','±2 uur','draaiboek 🔒'],
    uitleg:`<h4>Het verhaal</h4>
      <p>Terra d'Eerde, juni 1965. Veertig jaar lang hield <strong>Don Massimo</strong> (78) de vier families in een wankele vrede. Vanavond is die vrede aan flarden geschoten: de peetvader is dood aangetroffen in de keuken. Doodsoorzaak: onbekend.</p>
      <h4>Hoe werkt het?</h4>
      <ul>
-       <li>Het spel wordt gestuurd door vier vooraf opgenomen video's op de beamer — geen live spelleider.</li>
+       <li>Het spel wordt gestuurd door vier vooraf opgenomen video's op de beamer - geen live spelleider.</li>
        <li>Vier verdachten (acteurs) worden via video geïntroduceerd en zijn daarna live te verhoren: <em>Angelo Rossi, Maria Marinelli, Vincent Verde en Sammy Nero</em>.</li>
        <li>Per verhoor: <strong>maximaal 5 vragen</strong>, daarna door naar een andere verdachte. Terugkomen mag, meeluisteren met andere teams is streng verboden.</li>
        <li>Achterhaal: <strong>de moordenaar · het moordwapen · het motief</strong>.</li>
@@ -697,15 +697,15 @@ const DAYS = [
      <h4>Verloop van de avond</h4>
      <table class="sched">
        <tr><th>Tijd</th><th>Fase</th></tr>
-       <tr class="vid"><td>20:00</td><td>🎬 Video 1 — De Ontdekking</td></tr>
-       <tr class="vid"><td>20:03</td><td>🎭 Video 2 — De Verdachten</td></tr>
+       <tr class="vid"><td>20:00</td><td>🎬 Video 1 - De Ontdekking</td></tr>
+       <tr class="vid"><td>20:03</td><td>🎭 Video 2 - De Verdachten</td></tr>
        <tr><td>20:07</td><td>Live introductie verdachten, in karakter</td></tr>
-       <tr class="vid"><td>20:12</td><td>📋 Video 3 — Start het Onderzoek</td></tr>
-       <tr><td>20:15</td><td>🔎 Onderzoeksronde 1 — verhoor de verdachten</td></tr>
+       <tr class="vid"><td>20:12</td><td>📋 Video 3 - Start het Onderzoek</td></tr>
+       <tr><td>20:15</td><td>🔎 Onderzoeksronde 1 - verhoor de verdachten</td></tr>
        <tr><td>20:45</td><td>⚖️ Beschuldigingen ronde 1 (3 min per famiglia)</td></tr>
-       <tr><td>21:00</td><td>🔎 Onderzoeksronde 2 — zo vaak als je wilt</td></tr>
+       <tr><td>21:00</td><td>🔎 Onderzoeksronde 2 - zo vaak als je wilt</td></tr>
        <tr><td>21:30</td><td>⚖️ Finale beschuldigingen</td></tr>
-       <tr class="vid"><td>21:45</td><td>💀 Video 4 — De Onthulling</td></tr>
+       <tr class="vid"><td>21:45</td><td>💀 Video 4 - De Onthulling</td></tr>
        <tr><td>21:55</td><td>👑 Uitslag + gelduitreiking winnende famiglia</td></tr>
      </table>`,
    draaiboek:`<h4>Rolverdeling organisatie</h4>
@@ -717,14 +717,14 @@ const DAYS = [
        <tr><td>Sandra</td><td>Gastverzorging</td><td>Drankjes/hapjes, sfeer, evt. getuigenrol</td></tr>
        <tr><td>Bart G</td><td>Politieagent</td><td>Props &amp; logistiek, hoort oplossingen aan</td></tr>
      </table>
-     <p><em>Belangrijk: jullie kennen de oplossing. Speel mee alsof je van niets weet. Stuur subtiel als je team vastloopt — dat is jullie spel-in-het-spel.</em></p>
+     <p><em>Belangrijk: jullie kennen de oplossing. Speel mee alsof je van niets weet. Stuur subtiel als je team vastloopt - dat is jullie spel-in-het-spel.</em></p>
      <h4>Acteurs / verdachten</h4>
      <ul>
-       <li>Niels — Angelo Rossi <em>'Rapido Angelo'</em>, gondelier (gondelierspak)</li>
-       <li>Sandra — Maria Marinelli <em>'Vespadonna'</em>, pizzakoerier (bezorgoutfit)</li>
-       <li>Ralf — Vincent Verde <em>'Il Papa'</em>, chef-kok (kokspak)</li>
-       <li>Kim — Sammy Nero <em>'Don Limon'</em>, limoncellostoker (glad pak)</li>
-       <li>Bart — politieagent (politiepak)</li>
+       <li>Niels - Angelo Rossi <em>'Rapido Angelo'</em>, gondelier (gondelierspak)</li>
+       <li>Sandra - Maria Marinelli <em>'Vespadonna'</em>, pizzakoerier (bezorgoutfit)</li>
+       <li>Ralf - Vincent Verde <em>'Il Papa'</em>, chef-kok (kokspak)</li>
+       <li>Kim - Sammy Nero <em>'Don Limon'</em>, limoncellostoker (glad pak)</li>
+       <li>Bart - politieagent (politiepak)</li>
      </ul>
      <h4>Checklist 19:30</h4>
      <ul>
@@ -737,11 +737,11 @@ const DAYS = [
      </ul>
      <h4>Props crime scene & verdachten</h4>
      <ul><li>Limoncellofles (ook een kapotte!) · camera + kapotte camera · pizzadozen · scooter/helm · gondel(decor) · pollepel · verscheurd papier</li></ul>
-     <details class="spoiler"><summary>De oplossing — alleen voor wie het écht moet weten</summary>
+     <details class="spoiler"><summary>De oplossing - alleen voor wie het écht moet weten</summary>
        <div class="spbody">
-         <p><strong>Moordenaar:</strong> Maria Marinelli — 'Vespadonna'.<br>
+         <p><strong>Moordenaar:</strong> Maria Marinelli - 'Vespadonna'.<br>
          <strong>Wapen:</strong> een fles Limoncello.<br>
-         <strong>Motief:</strong> Don Massimo wees haar droom als journalist af en vernietigde haar bewijs, inclusief haar camera. In een vlaag van woede sloeg ze hem neer — impuls, geen geplande afrekening.</p>
+         <strong>Motief:</strong> Don Massimo wees haar droom als journalist af en vernietigde haar bewijs, inclusief haar camera. In een vlaag van woede sloeg ze hem neer - impuls, geen geplande afrekening.</p>
          <p><em>Vincent Verde</em> stond te koken en liep juist wég uit de ruzie. <em>Sammy Nero</em> gooide in paniek een pollepel en rende weg. <em>Angelo Rossi</em> vond het lichaam, raakte in shock en vluchtte.</p>
        </div>
      </details>`,
@@ -751,7 +751,7 @@ const DAYS = [
      <li>Video's op USB (backup!) + laptop ${wie('Niels')}</li>
      <li>Moordspel voorbereiden ${wie('Allen')}</li>
      <li>Props verzamelen (zie draaiboek) ${wie('Bart G')}</li></ul>`,
-   videos:[vid('v1','Video 1','De Ontdekking','±3 min'), vid('v2','Video 2','De Verdachten','±4 min'), vid('v3','Video 3','Start het Onderzoek','±1 min'), vid('v4','Video 4','De Onthulling','±4 min — pas afspelen om 21:45!')]},
+   videos:[vid('v1','Video 1','De Ontdekking','±3 min'), vid('v2','Video 2','De Verdachten','±4 min'), vid('v3','Video 3','Start het Onderzoek','±1 min'), vid('v4','Video 4','De Onthulling','±4 min - pas afspelen om 21:45!')]},
   {section:'Dopo la Mezzanotte'},
   {time:'22:00', icon:'🎸', title:'Blues Brothers & Karaoke', sub:'Optreden, gevolgd door karaoke, Bella Ciao & hout stoken tot de vroege uurtjes.',
    uitleg:`<p>Na de onthulling barst het feest los: het legendarische <strong>Blues Brothers-optreden</strong>, daarna karaoke en samenzang (<em>Bella Ciao!</em>) rond het vuur.</p>`,
@@ -763,13 +763,13 @@ const DAYS = [
 ]},
 {
   id:'sab', tab:'Sabato', tabSub:'za 13 giugno', title:'Sabato',
-  sub:'La Battaglia delle Famiglie & Il Gran Casinò', dress:'Avond-dresscode: maffia chique — pak · hoed · bretels · jurk · handschoenen',
+  sub:'La Battaglia delle Famiglie & Il Gran Casinò', dress:'Avond-dresscode: maffia chique - pak · hoed · bretels · jurk · handschoenen',
   items:[
-  {time:'09:00', icon:'☕', title:'Ontbijt — La Prima Colazione', sub:'Een stevig begin voor de strijd die komt.',
-   uitleg:`<p>Ontbijt van 09:00 tot 10:00. Eet goed — om 11:00 begint de familiestrijd en de famiglia rust niet voor het goud binnen is.</p>`,
+  {time:'09:00', icon:'☕', title:'Ontbijt - La Prima Colazione', sub:'Een stevig begin voor de strijd die komt.',
+   uitleg:`<p>Ontbijt van 09:00 tot 10:00. Eet goed - om 11:00 begint de familiestrijd en de famiglia rust niet voor het goud binnen is.</p>`,
    taken:`<ul><li>Standaard ontbijt bestellen bij Jumbo, laten bezorgen ${wie('Sandra')}</li></ul>`},
-  {section:'La Sfida — Familiestrijd'},
-  {time:'11:00', icon:'🧳', hl:true, title:'Smokkelspel — Operazione Contrabbando', sub:'Vlagheide verandert in grensgebied. Vier families proberen hun smokkelwaar veilig over te brengen zonder betrapt te worden.', badges:['buitenspel','Vlagheide'],
+  {section:'La Sfida - Familiestrijd'},
+  {time:'11:00', icon:'🧳', hl:true, title:'Smokkelspel - Operazione Contrabbando', sub:'Vlagheide verandert in grensgebied. Vier families proberen hun smokkelwaar veilig over te brengen zonder betrapt te worden.', badges:['buitenspel','Vlagheide'],
    uitleg:`<h4>Doel van het spel</h4>
      <p>Elke famiglia probeert in het bos zoveel mogelijk <strong>smokkelwaar</strong> van het ene punt naar het andere te brengen. Alles draait om snelheid, slim samenspel en het ontwijken van de grenswacht.</p>
      <h4>Spelverloop</h4>
@@ -799,14 +799,14 @@ const DAYS = [
      <li>2 koffers ${wie('Sandra')}</li>
      <li>Smokkelwaar / goudstaven klaarzetten ${wie('Org')}</li>
      <li>Pokerkoffer voor het geld ${wie('Sandra')}</li></ul>`},
-  {time:'13:00', icon:'🥖', title:'Pranzo — Lunch', sub:'Gesmeerde broodjes. Krachten verzamelen voor de races.',
+  {time:'13:00', icon:'🥖', title:'Pranzo - Lunch', sub:'Gesmeerde broodjes. Krachten verzamelen voor de races.',
    taken:`<ul><li>Lunch: gesmeerde broodjes ${wie('Ralf')}</li></ul>`},
-  {time:'15:00', icon:'🐎', hl:true, title:'La Corsa dei Cavalli — Paardenrace', sub:'Zes manches op stokpaarden, afgesloten met dressuur. Wedden toegestaan — sterker: verplicht voor wie eer heeft.', badges:['6 manches','wedkantoor open'],
+  {time:'15:00', icon:'🐎', hl:true, title:'La Corsa dei Cavalli - Paardenrace', sub:'Zes manches op stokpaarden, afgesloten met dressuur. Wedden toegestaan - sterker: verplicht voor wie eer heeft.', badges:['6 manches','wedkantoor open'],
    uitleg:`<h4>Het programma</h4>
-     <p>Vijf races plus een dressuurproef. Per manche start één edel ros per famiglia — je jockeys zijn vooraf ingeschreven. De famiglie zetten in bij het wedkantoor; uitbetaling tegen de officiële odds.</p>
+     <p>Vijf races plus een dressuurproef. Per manche start één edel ros per famiglia - je jockeys zijn vooraf ingeschreven. De famiglie zetten in bij het wedkantoor; uitbetaling tegen de officiële odds.</p>
      <p>Bekijk de volledige startlijsten en noteringen op de pagina <strong>La Corsa</strong> in het menu. Het winnende paard van de dag krijgt een krans en een plek op de eeuwige foto.</p>
      <h4>Muziek bij de dressuur</h4>
-     <ul><li>Mambo Italiano — Dean Martin</li><li>Tu Vuo' Fà L'Americano — Renato Carosone</li><li>Volare — Dean Martin</li><li>Bella Ciao — La Casa de Papel</li><li>The Godfather Theme (remix)</li></ul>`,
+     <ul><li>Mambo Italiano - Dean Martin</li><li>Tu Vuo' Fà L'Americano - Renato Carosone</li><li>Volare - Dean Martin</li><li>Bella Ciao - La Casa de Papel</li><li>The Godfather Theme (remix)</li></ul>`,
    taken:`<h4>Taken</h4><ul>
      <li>Inschrijflijst jockeys ${wie('Niels')}</li>
      <li>Raceplanning + odds (Excel) ${wie('Niels')}</li>
@@ -816,17 +816,17 @@ const DAYS = [
      <li>Krans/sjerp voor het winnende paard ${wie('Kim')}</li>
      <li>Extra spellen: volleybal / cornhole ${wie('Bart · Elske')}</li></ul>`},
   {time:'17:00', icon:'💰', title:'Gelduitreiking & Tussenstand', sub:'Opbrengsten van smokkelspel en paardenrace. Wie staat bovenaan op weg naar Il Capo dei Capi?',
-   uitleg:`<p>De boekhouders maken de balans op: smokkelwinsten plus race-opbrengsten gaan de familiekassen in. De tussenstand wordt plenair bekendgemaakt — en bepaalt straks de extra chips bij de Casino Night.</p>`,
+   uitleg:`<p>De boekhouders maken de balans op: smokkelwinsten plus race-opbrengsten gaan de familiekassen in. De tussenstand wordt plenair bekendgemaakt - en bepaalt straks de extra chips bij de Casino Night.</p>`,
    taken:`<ul><li>Punten &amp; kassen bijhouden ${wie('Ko')}</li><li>Bierpakketje voor Hans en Martien ${wie('Org')}</li></ul>`},
   {section:'La Serata di Gala'},
-  {time:'18:00', icon:'🍖', title:'Gran Cena — Pulled Pork al Spiedo', sub:'Het varken aan het spit. Daarna omkleden in gala voor het grote avondprogramma.',
+  {time:'18:00', icon:'🍖', title:'Gran Cena - Pulled Pork al Spiedo', sub:'Het varken aan het spit. Daarna omkleden in gala voor het grote avondprogramma.',
    taken:`<ul><li>Diner: broodje pulled pork, varken aan het spit ${wie('Ralf')}</li></ul>`},
   {time:'19:30', icon:'📸', title:'La Foto di Famiglia', sub:'Alle families in gala. Fotograaf: Kim Rijkers. Niet-deelnemers zijn uitgenodigd om aan te sluiten.',
    uitleg:`<p>Hét fotomoment van het weekend: alle dertig leden in maffia chique. Vrienden die het weekend niet meedoen zijn expliciet uitgenodigd om voor de foto (en de borrel) aan te sluiten.</p>`,
    taken:`<ul>
-     <li>Fotograaf Kim Rijkers — contact ${wie('Ralf')}</li>
+     <li>Fotograaf Kim Rijkers - contact ${wie('Ralf')}</li>
      <li>Niet-deelnemers uitnodigen (Natascha &amp; Paul, Robin, Nienke, Lisanne, Inge) ${wie('Ralf')}</li></ul>`},
-  {time:'20:30', icon:'🎲', hl:true, title:'Casino Night — Il Gran Casinò', sub:'Drie uur gokken voor de famiglia-kas. Poker · roulette · blackjack.', badges:['3 uur','hoge inzetten'],
+  {time:'20:30', icon:'🎲', hl:true, title:'Casino Night - Il Gran Casinò', sub:'Drie uur gokken voor de famiglia-kas. Poker · roulette · blackjack.', badges:['3 uur','hoge inzetten'],
    uitleg:`<h4>De regels van het huis</h4>
      <ul>
        <li>Iedereen krijgt een gelijk startkapitaal aan chips.</li>
@@ -837,7 +837,7 @@ const DAYS = [
    taken:`<ul>
      <li>Casinospellen ${wie('Bart')}</li>
      <li>Zwarte tafelkleden ${wie('Sandra')}</li></ul>`},
-  {time:'00:00', icon:'👑', hl:true, title:'La Grande Premiazione — Kroning Il Capo dei Capi', sub:'De rijkste famiglia grijpt de macht. Sigaar · grote fles prosecco · eeuwige roem.',
+  {time:'00:00', icon:'👑', hl:true, title:'La Grande Premiazione - Kroning Il Capo dei Capi', sub:'De rijkste famiglia grijpt de macht. Sigaar · grote fles prosecco · eeuwige roem.',
    uitleg:`<p>Middernacht. De kassen worden geteld, de rijkste famiglia wordt gekroond tot <strong>Il Capo dei Capi</strong>. De prijs: een sigaar, een grote fles prosecco met eigen famiglia-etiket, en een jaar lang het laatste woord.</p>`,
    taken:`<ul>
      <li>Etiketten grote fles prosecco printen ${wie('Niels')}</li>
@@ -847,46 +847,46 @@ const DAYS = [
 ]},
 {
   id:'dom', tab:'Domenica', tabSub:'zo 14 giugno', title:'Domenica',
-  sub:"L'Arrivederci — Het Afscheid", dress:'Alles wat begint, moet ook eindigen — ma non per sempre',
+  sub:"L'Arrivederci - Het Afscheid", dress:'Alles wat begint, moet ook eindigen - ma non per sempre',
   items:[
-  {time:'Ochtend', icon:'☕', title:"L'Ultima Colazione — Laatste Ontbijt", sub:'Met de verhalen van de nacht. De resterende prosecco wordt opgemaakt.',
+  {time:'Ochtend', icon:'☕', title:"L'Ultima Colazione - Laatste Ontbijt", sub:'Met de verhalen van de nacht. De resterende prosecco wordt opgemaakt.',
    uitleg:`<p>Rustig ontbijt met sterke koffie en sterkere verhalen. De Capo dei Capi mag zijn sigaar oproken aan het hoofd van de tafel.</p>`},
-  {time:'—', icon:'👑', hl:true, title:'Aanwijzing Volgende Organisatie', sub:'De staf wordt doorgegeven. Wie organiseert het volgende vriendenweekend?',
-   uitleg:`<p>Traditie: de organisatie wijst haar opvolgers aan. De famiglia die de macht heeft, geeft de opdracht door — en daarmee een jaar om iets te verzinnen dat dít overtreft. <em>Auguri.</em></p>`},
-  {time:'—', icon:'🧹', title:'Opruimen & Vertrek', sub:'Villa Brabante Sentimento verlaten zoals een goede famiglia betaamt — schoon en met eer.',
-   uitleg:`<p>Alle sporen worden gewist. Een goede famiglia laat niets achter — geen vingerafdrukken, geen lege flessen. Arrivederci!</p>`}
+  {time:'-', icon:'👑', hl:true, title:'Aanwijzing Volgende Organisatie', sub:'De staf wordt doorgegeven. Wie organiseert het volgende vriendenweekend?',
+   uitleg:`<p>Traditie: de organisatie wijst haar opvolgers aan. De famiglia die de macht heeft, geeft de opdracht door - en daarmee een jaar om iets te verzinnen dat dít overtreft. <em>Auguri.</em></p>`},
+  {time:'-', icon:'🧹', title:'Opruimen & Vertrek', sub:'Villa Brabante Sentimento verlaten zoals een goede famiglia betaamt - schoon en met eer.',
+   uitleg:`<p>Alle sporen worden gewist. Een goede famiglia laat niets achter - geen vingerafdrukken, geen lege flessen. Arrivederci!</p>`}
 ]}];
 
 /* ════════════ FAMILIES ════════════ */
 const FAMILIES = [
  {id:'rossi', naam:'Famiglia Rossi', nick:'De Vergiftigers', kleur:'Bordeaux Rood', cvar:'#8e2030', crest:'crest-rossi',
-  quote:'"Chi beve solo, muore solo." — Wie alleen drinkt, sterft alleen.',
+  quote:'"Chi beve solo, muore solo." - Wie alleen drinkt, sterft alleen.',
   dekmantel:'Wijnhandelaren', spec:'Gifstoffen & Liquidaties', kapitein:'Niels', padre:'Harold',
   leden:['Niels','Noor','Twan','Martijn','Gale','Lucien','Erik','Harold'],
   kleding:'Bordeauxrood · donkerpaars · fluweelzwart. Zaterdagavond chique: elegant Italiaans pak of jurk, gouden accessoires, lange handschoenen.',
   attributen:'Wijnflessen · nep-gifampul · rode rozen · zijden zakdoek',
-  intro:'Jij bent uitverkoren voor de meest gevreesde famiglia van het weekend. De Rossi’s handelen in wijn — en in stille geheimen.'},
+  intro:'Jij bent uitverkoren voor de meest gevreesde famiglia van het weekend. De Rossi's handelen in wijn - en in stille geheimen.'},
  {id:'marinelli', naam:'Famiglia Marinelli', nick:'De Smokkelaars', kleur:'Marineblauw', cvar:'#274a6d', crest:'crest-marinelli',
-  quote:'"Il porto è nostro — tutto il resto è negoziabile." — De haven is van ons, al het andere is onderhandelbaar.',
+  quote:'"Il porto è nostro - tutto il resto è negoziabile." - De haven is van ons, al het andere is onderhandelbaar.',
   dekmantel:'Havenbaronnen', spec:'Wapen- & Drugssmokkel', kapitein:'Sandra', padre:'Frans',
   leden:['Sandra','Jan','Elske','Maykel','Frans','Ted','Lenneke','Hein'],
-  kleding:'Marineblauw · wit gestreept · nautisch maar gevaarlijk. Matrozenpet, captain’s look, zeemanstrui, donkere laarzen. Zaterdagavond chique met blauwe accessoires.',
+  kleding:'Marineblauw · wit gestreept · nautisch maar gevaarlijk. Matrozenpet, captain's look, zeemanstrui, donkere laarzen. Zaterdagavond chique met blauwe accessoires.',
   attributen:'Touw & netten · mysterieuze koffer · verrekijker · oude zeekaart',
-  intro:'Jij behoort tot de Marinelli’s. Wij controleren wat er in en uit gaat. Niemand smokkelt in onze haven zónder onze goedkeuring.'},
+  intro:'Jij behoort tot de Marinelli's. Wij controleren wat er in en uit gaat. Niemand smokkelt in onze haven zónder onze goedkeuring.'},
  {id:'verde', naam:'Famiglia Verde', nick:'De Plattelandsmaffia', kleur:'Olijfgroen', cvar:'#5a6e35', crest:'crest-verde',
-  quote:'"Le radici sono tutto — nessuno lascia la famiglia vivo." — De wortels zijn alles, niemand verlaat de familie levend.',
+  quote:'"Le radici sono tutto - nessuno lascia la famiglia vivo." - De wortels zijn alles, niemand verlaat de familie levend.',
   dekmantel:'Olijfolieproducenten', spec:'Beschermingsgeld & Vendetta', kapitein:'Ralf', padre:'Piet',
   leden:['Ralf','Piet K','Suus','Kim B','Bas','Marieke E','Bart G'],
   kleding:'Olijfgroen · aards · robuust. Zaterdagavond chique: elegant Italiaans pak of jurk met groene accenten.',
-  attributen:'Olijftak · olijfoliefles · zakmes (nep) · landkaart van Terra d’Eerde',
-  intro:'Jij bent Verde. Wij komen van het land. Wij zijn stil, wij zijn sterk, en wij vergeten nooit. De stad denkt dat wij boeren zijn — laat ze maar denken.'},
+  attributen:'Olijftak · olijfoliefles · zakmes (nep) · landkaart van Terra d'Eerde',
+  intro:'Jij bent Verde. Wij komen van het land. Wij zijn stil, wij zijn sterk, en wij vergeten nooit. De stad denkt dat wij boeren zijn - laat ze maar denken.'},
  {id:'nero', naam:'Famiglia Nero', nick:'De Woekeraars', kleur:'Zwart', cvar:'#4a4a52', crest:'crest-nero',
-  quote:'"Fortuna audaces iuvat — wie niet betaalt, verdwijnt."',
-  dekmantel:'Bankiers & Financiers', spec:'Woekerrentes & Afpersing', kapitein:'Ko (Kim de K)', padre:'—',
+  quote:'"Fortuna audaces iuvat - wie niet betaalt, verdwijnt."',
+  dekmantel:'Bankiers & Financiers', spec:'Woekerrentes & Afpersing', kapitein:'Ko (Kim de K)', padre:'-',
   leden:['Ko','Neeltje','Rens','Femke','Bart P','Sten','Kim V'],
   kleding:'Zwart op zwart · strak in het pak · dure horloges en nét iets te veel goud. Zaterdagavond: het duurste dat je kast te bieden heeft.',
   attributen:'Speelkaarten · dobbelstenen · geldkoffer · sigaar (nep)',
-  intro:'Jij hoort bij de Nero’s. Wij lenen, wij innen, wij vergeten geen enkel bedrag. De casino’s zijn slechts een façade.'}
+  intro:'Jij hoort bij de Nero's. Wij lenen, wij innen, wij vergeten geen enkel bedrag. De casino's zijn slechts een façade.'}
 ];
 
 /* ════════════ RACES ════════════ */
@@ -896,7 +896,7 @@ const RACES = [
  {nr:'Race 3', paarden:[["Rens 'Rennende Roeper'",'nero',2.6],["Suus 'Stuivend Stofje'",'verde',4.2],["Elske 'Elegante Elf'",'marinelli',5.0],["Twan 'Tornado Twan'",'rossi',2.4]]},
  {nr:'Race 4', paarden:[["Femke 'Flitsende Fee'",'nero',3.4],["Kim B 'Kanonskogel'",'verde',3.6],["Maykel 'Machtige Mustang'",'marinelli',2.9],["Martijn 'Meester Mars'",'rossi',3.2]]},
  {nr:'Race 5', paarden:[["Bart P 'Bliksem Bart'",'nero',2.7],["Bas 'Beest van Brabant'",'verde',3.3],["Frans 'Furieuze Fries'",'marinelli',3.9],["Gale 'Galopperende Gale'",'rossi',3.1]]},
- {nr:'Race 6 — Dressuur', paarden:[["Sten 'Stormachtige Sten'",'nero',3.5],["Marieke E 'Mysterie'",'verde',4.0],["Ted 'Teddybeer Turbo'",'marinelli',2.8],["Lucien 'Legendarische L'",'rossi',3.0]]}
+ {nr:'Race 6 - Dressuur', paarden:[["Sten 'Stormachtige Sten'",'nero',3.5],["Marieke E 'Mysterie'",'verde',4.0],["Ted 'Teddybeer Turbo'",'marinelli',2.8],["Lucien 'Legendarische L'",'rossi',3.0]]}
 ];
 const FCOLOR = {rossi:'#8e2030', marinelli:'#274a6d', verde:'#5a6e35', nero:'#6a6a72'};
 const FNAME = {rossi:'Rossi', marinelli:'Marinelli', verde:'Verde', nero:'Nero'};
@@ -936,7 +936,7 @@ function renderDay(){
 
 /* ════════════ MODAL ════════════ */
 const lockBlock = (wat)=>`<div class="locknote"><span class="big">🔒</span>
-  ${wat} is alleen zichtbaar voor de organisatie.<br>Sst… omertà.
+  ${wat} is alleen zichtbaar voor de organisatie.<br>Sst... omertà.
   <button onclick="askCode()">Voer het codewoord in</button></div>`;
 
 function openItem(dayI, itemI){
@@ -986,7 +986,7 @@ function playVideo(key, titel){
       <div class="mtime">Proiezione</div><h3>${titel}</h3></div>
       <div class="mbody"><div class="locknote"><span class="big">🎬</span>
       Deze video is nog niet gekoppeld.<br>
-      <em>Open het bestand en vul bij <strong>VIDEO_LINKS</strong> (bovenin) het pad of de link in — bijv. <code>'videos/${key}.mp4'</code> of een YouTube-embed.</em></div></div>`);
+      <em>Open het bestand en vul bij <strong>VIDEO_LINKS</strong> (bovenin) het pad of de link in - bijv. <code>'videos/${key}.mp4'</code> of een YouTube-embed.</em></div></div>`);
     return;
   }
   const isYT = /youtube\.com|youtu\.be/.test(src);
@@ -1009,7 +1009,7 @@ function askCode(){
     renderDay(); renderFams();
     alert('Benvenuto, consigliere. Draaiboeken en taken zijn ontgrendeld.');
   } else {
-    alert('Verkeerd codewoord. De famiglia vergeet niet…');
+    alert('Verkeerd codewoord. De famiglia vergeet niet...');
   }
 }
 function updateLockBtn(){
@@ -1057,7 +1057,7 @@ function openFam(i){
       <ul>
         <li><strong>Specialiteit:</strong> ${f.spec}</li>
         <li><strong>Dekmantel:</strong> ${f.dekmantel}</li>
-        <li><strong>Padre di Famiglia:</strong> ${f.padre} — hij/zij spreekt namens de familie, en niemand gaat in tegen de Padre</li>
+        <li><strong>Padre di Famiglia:</strong> ${f.padre} - hij/zij spreekt namens de familie, en niemand gaat in tegen de Padre</li>
         <li><strong>Kapitein (organisatie):</strong> ${f.kapitein}</li>
       </ul>
       <h4>Kleding</h4><p>${f.kleding}</p>
@@ -1078,7 +1078,7 @@ function renderRaces(){
         <td class="oddnum">${odds.toFixed(1)}</td></tr>`).join('')}
     </table>`).join('') + `
     <p style="font-style:italic;color:var(--ink-faint);text-align:center;margin-top:26px">
-      Inzetten via het officiële wedkantoor van de organisatie. Uitkering = inzet × odds. Niet goed, geld weg — zo werkt dat bij ons.</p>`;
+      Inzetten via het officiële wedkantoor van de organisatie. Uitkering = inzet × odds. Niet goed, geld weg - zo werkt dat bij ons.</p>`;
 }
 
 /* ════════════ COUNTDOWN ════════════ */
@@ -1089,12 +1089,12 @@ function renderCountdown(){
   const now = new Date();
   if(now>=start && now<=end){
     el.classList.add('oggi');
-    el.innerHTML = `<div class="big">OGGI — HET IS ZOVER</div><div class="lab" style="font-family:'Cinzel',serif;font-size:10px;letter-spacing:3px;color:var(--ink-dim)">DE FAMIGLIE ZIJN BIJEEN · IN BOCCA AL LUPO</div>`;
+    el.innerHTML = `<div class="big">OGGI - HET IS ZOVER</div><div class="lab" style="font-family:'Cinzel',serif;font-size:10px;letter-spacing:3px;color:var(--ink-dim)">DE FAMIGLIE ZIJN BIJEEN · IN BOCCA AL LUPO</div>`;
     return;
   }
   if(now>end){
     el.classList.add('oggi');
-    el.innerHTML = `<div class="big">ARRIVEDERCI</div><div class="lab" style="font-family:'Cinzel',serif;font-size:10px;letter-spacing:3px;color:var(--ink-dim)">TOT HET VOLGENDE WEEKEND — DE FAMIGLIA VERGEET NIET</div>`;
+    el.innerHTML = `<div class="big">ARRIVEDERCI</div><div class="lab" style="font-family:'Cinzel',serif;font-size:10px;letter-spacing:3px;color:var(--ink-dim)">TOT HET VOLGENDE WEEKEND - DE FAMIGLIA VERGEET NIET</div>`;
     return;
   }
   function tick(){
