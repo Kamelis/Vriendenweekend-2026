@@ -295,6 +295,14 @@ nav .brand svg{width:26px;height:26px}
 .odds .oddnum{font-family:'Cinzel',serif;color:var(--gold-l);font-weight:700}
 .fdot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:7px;vertical-align:baseline}
 
+/* foto's */
+.photogrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:26px}
+.photocard{background:var(--bg2);border:1px solid var(--line);padding:14px;transition:.25s}
+.photocard:hover{border-color:var(--gold-d);box-shadow:0 0 24px rgba(201,150,43,.08)}
+.photocard img{display:block;width:100%;height:auto;border:1px solid var(--gold-dd);background:#0b0905}
+.photocard .cap{margin-top:12px;color:var(--ink);font-size:14px;line-height:1.5}
+.photocard .meta{margin-top:8px;font-family:'Cinzel',serif;font-size:9px;letter-spacing:2px;color:var(--ink-faint);text-transform:uppercase}
+
 /* footer */
 footer{text-align:center;padding:40px 20px 60px;border-top:1px solid var(--line);margin-top:30px}
 footer .m{font-family:'Cinzel Decorative',serif;font-size:11px;letter-spacing:5px;color:var(--gold-dd);text-transform:uppercase}
@@ -329,6 +337,7 @@ footer .v{margin-top:10px;font-family:'Cinzel',serif;font-size:9px;letter-spacin
   <button class="navbtn" data-page="programma">Programma</button>
   <button class="navbtn" data-page="famiglie">Le Famiglie</button>
   <button class="navbtn" data-page="corsa">La Corsa</button>
+  <button class="navbtn" data-page="fotos">Foto's</button>
   <button class="lockbtn" id="lockBtn" title="Organisatie-modus">🔒 Organisatie</button>
 </nav>
 
@@ -506,10 +515,25 @@ footer .v{margin-top:10px;font-family:'Cinzel',serif;font-size:9px;letter-spacin
   <div id="raceList"></div>
 </section>
 
+<section class="page" id="page-fotos">
+  <div class="page-head">
+    <div class="eyebrow">Ricordi di Famiglia</div>
+    <h2>Foto's</h2>
+    <div class="tagline">De eerste beelden uit het weekenddossier. Subtiel verzameld, zoals een famiglia betaamt.</div>
+  </div>
+  <div class="photogrid">
+    <article class="photocard">
+      <img src="artwork/foto-vriendenweekend-001.jpg" alt="Foto van het Vriendenweekend 2026">
+      <div class="cap">Eerste foto toegevoegd aan het dossier van La Famiglia.</div>
+      <div class="meta">Vriendenweekend 2026 · Foto 001</div>
+    </article>
+  </div>
+</section>
+
 <footer>
   <div class="m">Omertà · Vendetta · Rispetto</div>
   <div class="d">· · ·</div>
-  <div class="v">Versie 1.0.2</div>
+  <div class="v">Versie 1.0.3</div>
 </footer>
 
 <!-- ═══════════ MODAL ═══════════ -->
