@@ -299,6 +299,7 @@ nav .brand svg{width:26px;height:26px}
 footer{text-align:center;padding:40px 20px 60px;border-top:1px solid var(--line);margin-top:30px}
 footer .m{font-family:'Cinzel Decorative',serif;font-size:11px;letter-spacing:5px;color:var(--gold-dd);text-transform:uppercase}
 footer .d{color:var(--gold-dd);letter-spacing:8px;margin-top:8px}
+footer .v{margin-top:10px;font-family:'Cinzel',serif;font-size:9px;letter-spacing:2px;color:var(--ink-faint);opacity:.8;text-transform:uppercase}
 
 @media(max-width:640px){
   .titem{flex-wrap:wrap}
@@ -508,6 +509,7 @@ footer .d{color:var(--gold-dd);letter-spacing:8px;margin-top:8px}
 <footer>
   <div class="m">Omertà · Vendetta · Rispetto</div>
   <div class="d">· · ·</div>
+  <div class="v" id="appVersion">Versie 1.0.1</div>
 </footer>
 
 <!-- ═══════════ MODAL ═══════════ -->
@@ -623,6 +625,7 @@ const VIDEO_LINKS = {
   teaser1: '', teaser2: '', teaser3: '', teaser4: ''
 };
 
+const APP_VERSION = '1.0.1';
 const ORG_KEY = 'b21lcnRhIQ=='; /* codewoord - base64 */
 let orgMode = false;
 
@@ -865,20 +868,20 @@ const FAMILIES = [
   leden:['Niels','Noor','Twan','Martijn','Gale','Lucien','Erik','Harold'],
   kleding:'Bordeauxrood · donkerpaars · fluweelzwart. Zaterdagavond chique: elegant Italiaans pak of jurk, gouden accessoires, lange handschoenen.',
   attributen:'Wijnflessen · nep-gifampul · rode rozen · zijden zakdoek',
-  intro:'Jij bent uitverkoren voor de meest gevreesde famiglia van het weekend. De Rossi's handelen in wijn - en in stille geheimen.'},
+  intro:"Jij bent uitverkoren voor de meest gevreesde famiglia van het weekend. De Rossi's handelen in wijn - en in stille geheimen."},
  {id:'marinelli', naam:'Famiglia Marinelli', nick:'De Smokkelaars', kleur:'Marineblauw', cvar:'#274a6d', crest:'crest-marinelli',
   quote:'"Il porto è nostro - tutto il resto è negoziabile." - De haven is van ons, al het andere is onderhandelbaar.',
   dekmantel:'Havenbaronnen', spec:'Wapen- & Drugssmokkel', kapitein:'Sandra', padre:'Frans',
   leden:['Sandra','Jan','Elske','Maykel','Frans','Ted','Lenneke','Hein'],
-  kleding:'Marineblauw · wit gestreept · nautisch maar gevaarlijk. Matrozenpet, captain's look, zeemanstrui, donkere laarzen. Zaterdagavond chique met blauwe accessoires.',
+  kleding:"Marineblauw · wit gestreept · nautisch maar gevaarlijk. Matrozenpet, captain's look, zeemanstrui, donkere laarzen. Zaterdagavond chique met blauwe accessoires.",
   attributen:'Touw & netten · mysterieuze koffer · verrekijker · oude zeekaart',
-  intro:'Jij behoort tot de Marinelli's. Wij controleren wat er in en uit gaat. Niemand smokkelt in onze haven zónder onze goedkeuring.'},
+  intro:"Jij behoort tot de Marinelli's. Wij controleren wat er in en uit gaat. Niemand smokkelt in onze haven zónder onze goedkeuring."},
  {id:'verde', naam:'Famiglia Verde', nick:'De Plattelandsmaffia', kleur:'Olijfgroen', cvar:'#5a6e35', crest:'crest-verde',
   quote:'"Le radici sono tutto - nessuno lascia la famiglia vivo." - De wortels zijn alles, niemand verlaat de familie levend.',
   dekmantel:'Olijfolieproducenten', spec:'Beschermingsgeld & Vendetta', kapitein:'Ralf', padre:'Piet',
   leden:['Ralf','Piet K','Suus','Kim B','Bas','Marieke E','Bart G'],
   kleding:'Olijfgroen · aards · robuust. Zaterdagavond chique: elegant Italiaans pak of jurk met groene accenten.',
-  attributen:'Olijftak · olijfoliefles · zakmes (nep) · landkaart van Terra d'Eerde',
+  attributen:"Olijftak · olijfoliefles · zakmes (nep) · landkaart van Terra d'Eerde",
   intro:'Jij bent Verde. Wij komen van het land. Wij zijn stil, wij zijn sterk, en wij vergeten nooit. De stad denkt dat wij boeren zijn - laat ze maar denken.'},
  {id:'nero', naam:'Famiglia Nero', nick:'De Woekeraars', kleur:'Zwart', cvar:'#4a4a52', crest:'crest-nero',
   quote:'"Fortuna audaces iuvat - wie niet betaalt, verdwijnt."',
@@ -886,7 +889,7 @@ const FAMILIES = [
   leden:['Ko','Neeltje','Rens','Femke','Bart P','Sten','Kim V'],
   kleding:'Zwart op zwart · strak in het pak · dure horloges en nét iets te veel goud. Zaterdagavond: het duurste dat je kast te bieden heeft.',
   attributen:'Speelkaarten · dobbelstenen · geldkoffer · sigaar (nep)',
-  intro:'Jij hoort bij de Nero's. Wij lenen, wij innen, wij vergeten geen enkel bedrag. De casino's zijn slechts een façade.'}
+  intro:"Jij hoort bij de Nero's. Wij lenen, wij innen, wij vergeten geen enkel bedrag. De casino's zijn slechts een façade."}
 ];
 
 /* ════════════ RACES ════════════ */
@@ -1109,6 +1112,8 @@ function renderCountdown(){
 
 /* ════════════ INIT ════════════ */
 updateLockBtn();
+const versionEl = document.getElementById('appVersion');
+if(versionEl) versionEl.textContent = `Versie ${APP_VERSION}`;
 renderDay();
 renderFams();
 renderRaces();
