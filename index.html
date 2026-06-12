@@ -8,11 +8,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=IM+Fell+English:ital@0;1&display=swap');
 
 :root{
-  --bg:#0d0b07; --bg2:#15110a; --panel:#1a1408;
-  --gold:#c9962b; --gold-l:#e8c070; --gold-d:#8a6820; --gold-dd:#5a4410;
-  --ink:#d4a855; --ink-dim:#9a7828; --ink-faint:#6a4e12;
+  --bg:#090704; --bg2:#14100a; --panel:#1b140c;
+  --gold:#d3a23c; --gold-l:#f3d38d; --gold-d:#a37926; --gold-dd:#6e5318;
+  --ink:#f0d9a2; --ink-dim:#d5b06a; --ink-faint:#b48a3e;
   --rossi:#8e2030; --marinelli:#274a6d; --verde:#5a6e35; --nero:#2a2a2e;
-  --line:#3a2e0a;
+  --line:#58431a;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -22,8 +22,9 @@ body{
   color:var(--ink);
   min-height:100vh;
   background-image:
-    radial-gradient(ellipse at 15% 0%, rgba(180,120,30,.07) 0%, transparent 45%),
-    radial-gradient(ellipse at 85% 100%, rgba(140,40,40,.05) 0%, transparent 45%);
+    radial-gradient(ellipse at 15% 0%, rgba(180,120,30,.10) 0%, transparent 45%),
+    radial-gradient(ellipse at 85% 100%, rgba(140,40,40,.07) 0%, transparent 45%),
+    linear-gradient(180deg, #0b0905 0%, #120d07 100%);
 }
 ::selection{background:var(--gold-d);color:#0d0b07}
 
@@ -143,7 +144,7 @@ nav .brand svg{width:26px;height:26px}
 .titem .ticon{font-size:22px;min-width:30px;text-align:center;filter:sepia(.4)}
 .titem .tt{flex:1}
 .titem .tt h3{font-size:17.5px;color:var(--gold-l);font-weight:bold;line-height:1.3}
-.titem .tt p{font-style:italic;font-size:13.5px;color:var(--ink-dim);margin-top:3px;line-height:1.45}
+.titem .tt p{font-style:italic;font-size:13.5px;color:var(--ink);margin-top:3px;line-height:1.5}
 .titem .more{
   font-family:'Cinzel',serif;font-size:9px;letter-spacing:2px;color:var(--gold-d);
   text-transform:uppercase;align-self:center;white-space:nowrap;
@@ -201,10 +202,10 @@ nav .brand svg{width:26px;height:26px}
 .mbody{padding:24px 30px 30px;font-size:15px;line-height:1.65}
 .mbody h4{font-family:'Cinzel',serif;font-size:12px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin:20px 0 10px}
 .mbody h4:first-child{margin-top:0}
-.mbody p{margin-bottom:11px;color:var(--ink)}
-.mbody em{color:var(--ink-dim)}
+.mbody p{margin-bottom:11px;color:var(--ink);text-shadow:0 1px 0 rgba(0,0,0,.2)}
+.mbody em{color:var(--gold-l)}
 .mbody ul{list-style:none;margin-bottom:12px}
-.mbody ul li{padding:5px 0 5px 22px;position:relative;border-bottom:1px dotted #2a2208}
+.mbody ul li{padding:5px 0 5px 22px;position:relative;border-bottom:1px dotted #3c2f12;color:var(--ink)}
 .mbody ul li::before{content:'✦';position:absolute;left:2px;color:var(--gold-d);font-size:10px;top:9px}
 .who{
   font-family:'Cinzel',serif;font-size:9px;letter-spacing:1.5px;color:#0d0b07;
@@ -768,22 +769,35 @@ const DAYS = [
    uitleg:`<p>Ontbijt van 09:00 tot 10:00. Eet goed — om 11:00 begint de familiestrijd en de famiglia rust niet voor het goud binnen is.</p>`,
    taken:`<ul><li>Standaard ontbijt bestellen bij Jumbo, laten bezorgen ${wie('Sandra')}</li></ul>`},
   {section:'La Sfida — Familiestrijd'},
-  {time:'11:00', icon:'🧳', hl:true, title:'Smokkelspel — Operazione Contrabbando', sub:'Vlagheide. Vier families strijden om de goudstaven. Wie smokkelt onopgemerkt langs de grenswacht?', badges:['buitenspel','Vlagheide'],
-   uitleg:`<h4>De missie</h4>
-     <p>De famiglie verplaatsen hun goudreserves over de Vlagheide. In koffers: <strong>goudstaven</strong>. Maar de grenswacht patrouilleert, en betrapt worden kost je de lading.</p>
+  {time:'11:00', icon:'🧳', hl:true, title:'Smokkelspel — Operazione Contrabbando', sub:'Vlagheide verandert in grensgebied. Vier families proberen hun smokkelwaar veilig over te brengen zonder betrapt te worden.', badges:['buitenspel','Vlagheide'],
+   uitleg:`<h4>Doel van het spel</h4>
+     <p>Elke famiglia probeert in het bos zoveel mogelijk <strong>smokkelwaar</strong> van het ene punt naar het andere te brengen. Alles draait om snelheid, slim samenspel en het ontwijken van de grenswacht.</p>
+     <h4>Spelverloop</h4>
      <ul>
-       <li>Elk famiglia-territorium is afgezet met lint in familiekleur.</li>
-       <li>Smokkel zoveel mogelijk goud van punt naar punt zonder gepakt te worden.</li>
-       <li>De opbrengst wordt om 17:00 uitgekeerd in famiglia-geld.</li>
+       <li>Elke famiglia start vanuit een eigen vak / thuisbasis, gemarkeerd met lint in familiekleur.</li>
+       <li>Vanuit die basis smokkel je voorwerpen naar het afgesproken afleverpunt en weer terug, afhankelijk van de opdracht van de spelleiding.</li>
+       <li>Je mag alleen tellende buit meenemen als je die daadwerkelijk veilig inlevert bij het juiste punt.</li>
      </ul>
-     <p><em>Volledige spelregels worden ter plekke uitgelegd. Draag schoenen waar je op kunt rennen.</em></p>`,
+     <h4>De grenswacht</h4>
+     <ul>
+       <li>Word je onderweg onderschept, dan ben je je smokkelwaar kwijt en moet je terug naar je eigen vak of startpunt.</li>
+       <li>Alleen buit die onopgemerkt de overkant haalt telt mee voor de eindstand.</li>
+       <li>Fair play blijft heilig: niet duwen, trekken of blokkeren buiten het spelidee om.</li>
+     </ul>
+     <h4>Belangrijk</h4>
+     <ul>
+       <li>Draag schoenen waarop je goed kunt rennen in het bos.</li>
+       <li>Blijf binnen het afgesproken speelgebied.</li>
+       <li>De opbrengst van het smokkelspel wordt om 17:00 uitgekeerd in famiglia-geld.</li>
+     </ul>
+     <p><em>Kort gezegd: slim lopen, snel schakelen en zorgen dat jouw familie met de grootste buit eindigt.</em></p>`,
    taken:`<h4>Taken</h4><ul>
-     <li>Smokkelspel verder uitwerken + speluitleg ${wie('Kim')}</li>
+     <li>Definitieve speluitleg Smokkelspel verwerken ${wie('Kim')}</li>
      <li>Timers voor meerdere spelers (iPhone) ${wie('Org')}</li>
-     <li>Linten ${wie('Kim')}</li>
+     <li>Linten / markering speelveld ${wie('Kim')}</li>
      <li>Familiewapen-afzetlint ${wie('Ralf')}</li>
      <li>2 koffers ${wie('Sandra')}</li>
-     <li>Goudstaven: stenen goud spuiten ${wie('Org')}</li>
+     <li>Smokkelwaar / goudstaven klaarzetten ${wie('Org')}</li>
      <li>Pokerkoffer voor het geld ${wie('Sandra')}</li></ul>`},
   {time:'13:00', icon:'🥖', title:'Pranzo — Lunch', sub:'Gesmeerde broodjes. Krachten verzamelen voor de races.',
    taken:`<ul><li>Lunch: gesmeerde broodjes ${wie('Ralf')}</li></ul>`},
