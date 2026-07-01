@@ -310,25 +310,25 @@ h1 {
     <div class="brand"><span class="mark">RW</span><span>Rock Werchter 2026</span></div>
     <div class="navlinks">
       <a href="#programma">Programma</a>
-      <a href="#mainstage">Main Stage</a>
+      <a href="#artiesten">Artiesten</a>
       <a href="#fotos">Foto's</a>
       <a href="#bronnen">Bronnen</a>
     </div>
   </nav>
   <div class="hero-copy">
     <div class="kicker">2 - 5 juli 2026 · Festivalpark Werchter</div>
-    <h1>Programma, Main Stage-bibliografie en fotoarchief</h1>
-    <p>De oude vriendenfoto's zijn verwijderd. Deze site is nu een schone Rock Werchter 2026-hub met het volledige festivalprogramma, Main Stage-artiesten, Spotify-nummers en een lege foto-inbox die klaarstaat voor automatische tagging.</p>
+    <h1>Programma, artiesten en fotoarchief</h1>
+    <p>Rock Werchter 2026 in een compacte festivalhub met het volledige programma, artiestenprofielen, Spotify-links naar bekende nummers en een foto-inbox die klaarstaat voor automatische tagging.</p>
     <div class="hero-actions">
       <a class="btn" href="#programma">Open programma</a>
-      <a class="btn secondary" href="#mainstage">Main Stage-artiesten</a>
+      <a class="btn secondary" href="#artiesten">Artiestenbibliografie</a>
     </div>
   </div>
   <div class="stats">
     <div class="stat"><b>Festival</b><span>Rock Werchter 2026</span></div>
     <div class="stat"><b>Dagen</b><span>2, 3, 4 en 5 juli</span></div>
     <div class="stat"><b>Stages</b><span>6 podia in het programma</span></div>
-    <div class="stat"><b>Versie</b><span>2.1.0</span></div>
+    <div class="stat"><b>Versie</b><span>2.2.0</span></div>
   </div>
 </header>
 
@@ -346,11 +346,11 @@ h1 {
     </div>
   </section>
 
-  <section class="band" id="mainstage">
+  <section class="band" id="artiesten">
     <div class="wrap">
       <div class="section-head">
-        <h2>Main Stage-bibliografie</h2>
-        <p>Korte biografie per Main Stage-act met Spotify-zoeklinks naar bekende, veelbeluisterde nummers. De links zoeken direct in Spotify, zodat ze blijven werken als Spotify zelf zijn populariteitsrangorde wijzigt.</p>
+        <h2>Artiestenbibliografie</h2>
+        <p>Korte biografie per act in het programma, met Spotify-links naar bekende nummers of een directe topnummerszoeking. De links blijven bruikbaar als Spotify zijn populariteitsrangorde wijzigt.</p>
       </div>
       <div class="toolbar" id="artistFilters"></div>
       <div class="library" id="artistLibrary"></div>
@@ -366,8 +366,8 @@ h1 {
       <div class="photos-empty">
         <div class="drop">
           <div>
-            <h3>Nog geen Werchter-foto's toegevoegd</h3>
-            <p>De oude vriendenweekend-foto's zijn uit de site verwijderd. Nieuwe foto's kunnen straks als echte Werchter-beelden worden toegevoegd en automatisch worden gecategoriseerd.</p>
+            <h3>Nog geen festivalfoto's toegevoegd</h3>
+            <p>Nieuwe beelden kunnen straks als Rock Werchter-foto's worden toegevoegd en automatisch worden gecategoriseerd op dag, podium, artiest en personen.</p>
           </div>
         </div>
         <div class="rules">
@@ -403,7 +403,7 @@ h1 {
 <footer class="footer">
   <div class="wrap">
     <span>Rock Werchter 2026 · programma & fotoarchief</span>
-    <span>Versie 2.1.0</span>
+    <span>Versie 2.2.0</span>
   </div>
 </footer>
 
@@ -463,36 +463,92 @@ const program = [
   }
 ];
 
-const artistInfo = [
-  ["Yong Yello", "thu", "13.00 - 13.40", "Belgische rapper, producer en storyteller die persoonlijke teksten koppelt aan warme hiphopproductie.", ["Als Ge Slaapt", "Luchtkasteel", "Cirkels"]],
-  ["Zwangere Guy", "thu", "14.20 - 15.20", "Brusselse hiphopstem met scherpe teksten, rauwe energie en een sterke live-reputatie.", ["Gorik Pt. 1", "Wie Is Guy?", "ZG Is Zo Dood"]],
-  ["Triggerfinger", "thu", "16.00 - 17.00", "Antwerpse rockband rond Ruben Block, bekend om strakke riffs en stijlvolle live-sets.", ["I Follow Rivers", "All This Dancin' Around", "Soon"]],
-  ["Kasabian", "thu", "17.40 - 18.40", "Britse festivalrockband die indie, elektronica en stadionrefreinen combineert.", ["Fire", "Club Foot", "Underdog"]],
-  ["The Lumineers", "thu", "19.20 - 20.20", "Amerikaanse folkrockband met grote samenzang, akoestische drive en verhalende songs.", ["Ho Hey", "Ophelia", "Cleopatra"]],
-  ["The War on Drugs", "thu", "21.15 - 22.30", "Amerikaanse band rond Adam Granduciel, met dromerige heartlandrock en gelaagde gitaren.", ["Red Eyes", "Under The Pressure", "I Don't Live Here Anymore"]],
-  ["Mumford & Sons", "thu", "23.30 - 1.00", "Britse folkrock-headliner die banjo, stadionhooks en meezingbare refreinen groot maakte.", ["I Will Wait", "Little Lion Man", "The Cave"]],
-  ["Kingfishr", "fri", "13.00 - 13.40", "Ierse folkpopband met grote melodieën en organische live-arrangementen.", ["Killeagh", "Shot In The Dark", "Eyes Don't Lie"]],
-  ["Wolf Alice", "fri", "14.15 - 15.00", "Britse alternatieve rockband die shoegaze, punk en dromerige pop soepel mengt.", ["Don't Delete The Kisses", "Bros", "The Last Man On Earth"]],
-  ["The Last Dinner Party", "fri", "15.35 - 16.35", "Britse artrockband met dramatische pop, theatrale vocals en glamoureuze gitaararrangementen.", ["Nothing Matters", "Sinner", "Caesar on a TV Screen"]],
-  ["Royel Otis", "fri", "17.15 - 18.15", "Australisch indieduo met zonnige gitaren, luchtige hooks en laidback melodieën.", ["Oysters In My Pocket", "Sofa King", "Murder on the Dancefloor"]],
-  ["Teddy Swims", "fri", "19.00 - 20.00", "Amerikaanse zanger met soulvolle stem, pophooks en gospelachtige intensiteit.", ["Lose Control", "The Door", "Bad Dreams"]],
-  ["Lewis Capaldi", "fri", "21.00 - 22.30", "Schotse singer-songwriter, bekend om grote ballads en zelfrelativerende podiumhumor.", ["Someone You Loved", "Before You Go", "Wish You The Best"]],
-  ["The xx", "fri", "23.30 - 0.45", "Londens trio met minimalistische indiepop, elektronische ruimte en fluisterende vocalen.", ["Intro", "Crystalised", "Angels"]],
-  ["LANDMVRKS", "sat", "13.00 - 13.40", "Franse metalcoreband met scherpe breaks, melodische hooks en energieke pitmomenten.", ["Lost In A Wave", "Creature", "Self-Made Black Hole"]],
-  ["Palaye Royale", "sat", "14.10 - 14.55", "Canadees-Amerikaanse rockband met glamrock-attitude en theatrale liveshows.", ["Lonely", "Mr. Doctor Man", "You'll Be Fine"]],
-  ["Kneecap", "sat", "15.30 - 16.30", "Noord-Ierse hiphopgroep die Iers en Engels mixt met politiek geladen, explosieve sets.", ["H.O.O.D", "Better Way To Live", "Get Your Brits Out"]],
-  ["Reneé Rapp", "sat", "17.10 - 18.10", "Amerikaanse popzangeres en actrice met krachtige vocals en emotionele pop-anthems.", ["Tummy Hurts", "Snow Angel", "Too Well"]],
-  ["Halsey", "sat", "18.55 - 19.55", "Amerikaanse popartiest die alt-pop, rock en elektronische invloeden met persoonlijke teksten verbindt.", ["Without Me", "Colors", "Bad At Love"]],
-  ["Gorillaz", "sat", "20.55 - 22.25", "Virtuele band van Damon Albarn en Jamie Hewlett, met hiphop, dub, pop en gastvocalen.", ["Feel Good Inc.", "Clint Eastwood", "DARE"]],
-  ["Twenty One Pilots", "sat", "23.25 - 1.00", "Amerikaans duo dat alt-pop, rap, rock en elektronische productie in theatrale shows giet.", ["Stressed Out", "Ride", "Heathens"]],
-  ["Kaat Van Stralen", "sun", "13.00 - 13.35", "Belgische artiest met Nederlandstalige songs, scherpe energie en groeiende live-aanhang.", ["Stop Met Wenen", "Pater Familias", "Honger"]],
-  ["Bad Nerves", "sun", "14.05 - 14.45", "Britse punkrockband met snelle songs, garage-energie en powerpopmelodieën.", ["Baby Drummer", "Can't Be Mine", "You've Got The Nerve"]],
-  ["SONS", "sun", "15.15 - 15.55", "Belgische garagerockband met korte lontjes, snelle gitaren en directe festivalenergie.", ["Ricochet", "Naughty", "Tube Spit"]],
-  ["Rise Against", "sun", "16.35 - 17.35", "Amerikaanse punkrockband met politieke teksten, melodische refreinen en stevige livekracht.", ["Savior", "Prayer of the Refugee", "Satellite"]],
-  ["A Perfect Circle", "sun", "18.20 - 19.20", "Alternatieve rockband rond Maynard James Keenan en Billy Howerdel, donker en gelaagd.", ["Judith", "3 Libras", "The Outsider"]],
-  ["Moby", "sun", "20.10 - 21.40", "Elektronische pionier die dance, gospel, ambient en pop wereldwijd toegankelijk maakte.", ["Porcelain", "Natural Blues", "Why Does My Heart Feel So Bad?"]],
-  ["The Cure", "sun", "22.30 - 0.45", "Britse postpunk- en gothrocklegende rond Robert Smith, met melancholie en tijdloze hooks.", ["Friday I'm In Love", "Boys Don't Cry", "Just Like Heaven"]]
-].map(([name, day, time, bio, songs]) => ({ name, day, time, bio, songs }));
+const artistProfiles = {
+  "Yong Yello": ["Belgische rapper, producer en storyteller die persoonlijke teksten koppelt aan warme hiphopproductie.", ["Als Ge Slaapt", "Luchtkasteel", "Cirkels"]],
+  "Zwangere Guy": ["Brusselse hiphopstem met scherpe teksten, rauwe energie en een sterke live-reputatie.", ["Gorik Pt. 1", "Wie Is Guy?", "ZG Is Zo Dood"]],
+  "Triggerfinger": ["Antwerpse rockband rond Ruben Block, bekend om strakke riffs en stijlvolle live-sets.", ["I Follow Rivers", "All This Dancin' Around", "Soon"]],
+  "Kasabian": ["Britse festivalrockband die indie, elektronica en stadionrefreinen combineert.", ["Fire", "Club Foot", "Underdog"]],
+  "The Lumineers": ["Amerikaanse folkrockband met grote samenzang, akoestische drive en verhalende songs.", ["Ho Hey", "Ophelia", "Cleopatra"]],
+  "The War on Drugs": ["Amerikaanse band rond Adam Granduciel, met dromerige heartlandrock en gelaagde gitaren.", ["Red Eyes", "Under The Pressure", "I Don't Live Here Anymore"]],
+  "Mumford & Sons": ["Britse folkrock-headliner die banjo, stadionhooks en meezingbare refreinen groot maakte.", ["I Will Wait", "Little Lion Man", "The Cave"]],
+  "The Prodigy": ["Britse elektronische live-act die rave, breakbeat en punkenergie naar festivalweides bracht.", ["Firestarter", "Breathe", "Smack My Bitch Up"]],
+  "The Vaccines": ["Londense indieband met korte, directe gitaarpop en grote refreinen.", ["If You Wanna", "Post Break-Up Sex", "I Always Knew"]],
+  "Loyle Carner": ["Britse rapper met warme jazzinvloeden, introspectieve teksten en relaxte flow.", ["Ottolenghi", "Yesterday", "Ain't Nothing Changed"]],
+  "PUP": ["Canadese punkrockband met scherpe hooks, chaos en veel meeschreeuwbare frustratie.", ["DVP", "Kids", "Sleep In The Heat"]],
+  "Wolf Alice": ["Britse alternatieve rockband die shoegaze, punk en dromerige pop soepel mengt.", ["Don't Delete The Kisses", "Bros", "The Last Man On Earth"]],
+  "The Last Dinner Party": ["Britse artrockband met dramatische pop, theatrale vocals en glamoureuze gitaararrangementen.", ["Nothing Matters", "Sinner", "Caesar on a TV Screen"]],
+  "Royel Otis": ["Australisch indieduo met zonnige gitaren, luchtige hooks en laidback melodieën.", ["Oysters In My Pocket", "Sofa King", "Murder on the Dancefloor"]],
+  "Teddy Swims": ["Amerikaanse zanger met soulvolle stem, pophooks en gospelachtige intensiteit.", ["Lose Control", "The Door", "Bad Dreams"]],
+  "Lewis Capaldi": ["Schotse singer-songwriter, bekend om grote ballads en zelfrelativerende podiumhumor.", ["Someone You Loved", "Before You Go", "Wish You The Best"]],
+  "The xx": ["Londens trio met minimalistische indiepop, elektronische ruimte en fluisterende vocalen.", ["Intro", "Crystalised", "Angels"]],
+  "Charlotte de Witte": ["Belgische techno-dj en producer met donkere, strakke sets en wereldwijde clubstatus.", ["Sgadi Li Mi", "Doppler", "The Age Of Love"]],
+  "FKA twigs": ["Britse artiest die avant-pop, R&B, performance en elektronica tot een eigen wereld smeedt.", ["cellophane", "Two Weeks", "tears in the club"]],
+  "Franz Ferdinand": ["Schotse indierockband met hoekige riffs, dansbare grooves en instant festivalhooks.", ["Take Me Out", "No You Girls", "Do You Want To"]],
+  "Viagra Boys": ["Zweedse postpunkband met sarcastische teksten, saxriffs en rauwe live-energie.", ["Sports", "Punk Rock Loser", "Ain't Nice"]],
+  "Social Distortion": ["Amerikaanse punkrockband die melodieuze punk koppelt aan rock-'n-roll en rootsinvloeden.", ["Story of My Life", "Ball and Chain", "Ring of Fire"]],
+  "Agnes Obel": ["Deense componist en singer-songwriter met filmische piano, strijkers en verstilde melodieën.", ["Riverside", "Familiar", "The Curse"]],
+  "The Warning": ["Mexicaanse rockband van drie zussen met stevige riffs en moderne hardrockhooks.", ["CHOKE", "MORE", "MONEY"]],
+  "LANDMVRKS": ["Franse metalcoreband met scherpe breaks, melodische hooks en energieke pitmomenten.", ["Lost In A Wave", "Creature", "Self-Made Black Hole"]],
+  "Palaye Royale": ["Canadees-Amerikaanse rockband met glamrock-attitude en theatrale liveshows.", ["Lonely", "Mr. Doctor Man", "You'll Be Fine"]],
+  "Kneecap": ["Noord-Ierse hiphopgroep die Iers en Engels mixt met politiek geladen, explosieve sets.", ["H.O.O.D", "Better Way To Live", "Get Your Brits Out"]],
+  "Reneé Rapp": ["Amerikaanse popzangeres en actrice met krachtige vocals en emotionele pop-anthems.", ["Tummy Hurts", "Snow Angel", "Too Well"]],
+  "Halsey": ["Amerikaanse popartiest die alt-pop, rock en elektronische invloeden met persoonlijke teksten verbindt.", ["Without Me", "Colors", "Bad At Love"]],
+  "Gorillaz": ["Virtuele band van Damon Albarn en Jamie Hewlett, met hiphop, dub, pop en gastvocalen.", ["Feel Good Inc.", "Clint Eastwood", "DARE"]],
+  "Twenty One Pilots": ["Amerikaans duo dat alt-pop, rap, rock en elektronische productie in theatrale shows giet.", ["Stressed Out", "Ride", "Heathens"]],
+  "Pixies": ["Amerikaanse altrockpioniers met surrealistische teksten, harde-zachte dynamiek en cultklassiekers.", ["Where Is My Mind?", "Here Comes Your Man", "Debaser"]],
+  "Beirut": ["Project van Zach Condon met Balkanblazers, folkpop en melancholische melodieën.", ["Nantes", "Elephant Gun", "Postcards from Italy"]],
+  "Matt Berninger": ["Zanger van The National met donkere bariton, literaire teksten en ingetogen solo-pop.", ["One More Second", "Distant Axis", "Serpentine Prison"]],
+  "The Haunted Youth": ["Belgische dreampopband met melancholische gitaren en groots opgebouwde refreinen.", ["Teen Rebel", "Coming Home", "Broken"]],
+  "CMAT": ["Ierse singer-songwriter met country-pop, scherpe humor en grootse theatrale refreinen.", ["I Wanna Be a Cowboy, Baby!", "Stay For Something", "Take A Sexy Picture Of Me"]],
+  "Kokoroko": ["Londens collectief dat afrobeat, jazz en soul samenbrengt in warme, dansbare arrangementen.", ["Abusey Junction", "Ewà Inú", "Carry Me Home"]],
+  "Paul Kalkbrenner": ["Duitse producer en live-act, bekend om melodieuze techno en grote festivalmomenten.", ["Sky and Sand", "Aaron", "Feed Your Head"]],
+  "David Byrne": ["Schotse-Amerikaanse popvernieuwer, Talking Heads-frontman en maker van slimme, ritmische artpop.", ["Like Humans Do", "Everybody's Coming To My House", "Strange Overtones"]],
+  "Mogwai": ["Schotse postrockband die instrumentale spanning langzaam laat uitgroeien tot massieve climaxen.", ["Take Me Somewhere Nice", "Hunted by a Freak", "Mogwai Fear Satan"]],
+  "Cory Wong": ["Amerikaanse gitarist en producer met funkritmes, messcherpe slaggitaar en virtuoze bandenergie.", ["Cosmic Sans", "Meditation", "Airplane Mode"]],
+  "Sierra Ferrell": ["Amerikaanse singer-songwriter die country, folk, swing en bluegrass door elkaar laat lopen.", ["In Dreams", "Fox Hunt", "The Sea"]],
+  "Jessie Murph": ["Amerikaanse zangeres die pop, country en hiphop kleurt met rauwe vocalen.", ["Wild Ones", "Heartbroken", "Son of a Bitch"]],
+  "Joy Crookes": ["Britse soulzangeres met warme stem, jazzinvloeden en persoonlijke Londense verhalen.", ["Feet Don't Fail Me Now", "When You Were Mine", "Don't Let Me Down"]],
+  "Ethel Cain": ["Amerikaanse altpopartiest met donkere Americana, trage spanning en filmische songs.", ["American Teenager", "Crush", "A House In Nebraska"]],
+  "HAEVN": ["Nederlands duo met filmische pop, piano, elektronica en grote melodische opbouw.", ["Where the Heart Is", "Finding Out More", "We Are"]],
+  "Kaat Van Stralen": ["Belgische artiest met Nederlandstalige songs, scherpe energie en groeiende live-aanhang.", ["Stop Met Wenen", "Pater Familias", "Honger"]],
+  "Bad Nerves": ["Britse punkrockband met snelle songs, garage-energie en powerpopmelodieën.", ["Baby Drummer", "Can't Be Mine", "You've Got The Nerve"]],
+  "SONS": ["Belgische garagerockband met korte lontjes, snelle gitaren en directe festivalenergie.", ["Ricochet", "Naughty", "Tube Spit"]],
+  "Rise Against": ["Amerikaanse punkrockband met politieke teksten, melodische refreinen en stevige livekracht.", ["Savior", "Prayer of the Refugee", "Satellite"]],
+  "A Perfect Circle": ["Alternatieve rockband rond Maynard James Keenan en Billy Howerdel, donker en gelaagd.", ["Judith", "3 Libras", "The Outsider"]],
+  "Moby": ["Elektronische pionier die dance, gospel, ambient en pop wereldwijd toegankelijk maakte.", ["Porcelain", "Natural Blues", "Why Does My Heart Feel So Bad?"]],
+  "The Cure": ["Britse postpunk- en gothrocklegende rond Robert Smith, met melancholie en tijdloze hooks.", ["Friday I'm In Love", "Boys Don't Cry", "Just Like Heaven"]],
+  "NewDad": ["Ierse indierockband met dromerige gitaren, zachte vocalen en shoegaze-invloeden.", ["I Don't Recognise You", "Let Go", "Angel"]],
+  "House Of Protection": ["Hardere alternatieve act met post-hardcore, elektronica en explosieve live-arrangementen.", ["It's Supposed To Hurt", "Being One", "Pulling Teeth"]]
+};
+
+const stageDescriptions = {
+  "Main Stage": "Main Stage-act met groot festivalbereik en een set die als ankerpunt voor de dag werkt.",
+  "The Barn": "The Barn-act met sterke live-reputatie, detailrijke productie en een publiek dat echt komt luisteren.",
+  "KluB C": "KluB C-act met clubgevoel, alternatieve energie en ruimte voor verrassende ontdekkingen.",
+  "NEST": "NEST-act met opkomende naam, scherpe niche of stevige cultaanhang.",
+  "The Towers by Jupiler": "Towers-act met dansbare set, dj-energie of elektronische festivalpiek.",
+  "Het Magazijn": "Het Magazijn-act met dj-set, selectorprofiel of late festivalvibe."
+};
+
+function buildArtistInfo() {
+  return program.flatMap(day =>
+    Object.entries(day.stages).flatMap(([stage, slots]) =>
+      slots.map(([time, name]) => {
+        const profile = artistProfiles[name];
+        return {
+          name,
+          day: day.key,
+          time,
+          stage,
+          bio: profile?.[0] || `${stageDescriptions[stage]} Deze kaart gebruikt het programma als basis en linkt direct door naar Spotify om de bekendste nummers van ${name} te openen.`,
+          songs: profile?.[1] || [`${name} top songs`, `${name} popular`, `${name} live`]
+        };
+      })
+    )
+  );
+}
+
+const artistInfo = buildArtistInfo();
 
 const dayList = document.getElementById("dayList");
 const stageList = document.getElementById("stageList");
@@ -516,7 +572,7 @@ function renderProgram(dayKey = "thu") {
       ${slots.map(([time, artist]) => `
         <div class="slot">
           <div class="time">${time}</div>
-          <div class="artist">${artist}${stage === "Main Stage" ? `<small><a href="#mainstage" data-jump="${artist}">Bekijk Main Stage-bio + Spotify</a></small>` : ""}</div>
+          <div class="artist">${artist}<small><a href="#artiesten" data-jump="${artist}">Bekijk bio + Spotify</a></small></div>
         </div>
       `).join("")}
     </article>
@@ -528,19 +584,36 @@ function renderProgram(dayKey = "thu") {
 }
 
 function renderArtistFilters(active = "all") {
-  const filters = [["all", "Alles"], ["thu", "Donderdag"], ["fri", "Vrijdag"], ["sat", "Zaterdag"], ["sun", "Zondag"]];
-  artistFilters.innerHTML = filters.map(([key, label]) => `<button class="filter ${key === active ? "active" : ""}" data-artist-day="${key}">${label}</button>`).join("");
-  document.querySelectorAll("[data-artist-day]").forEach(button => button.addEventListener("click", () => {
-    renderArtists(button.dataset.artistDay);
+  const filters = [
+    ["all", "Alles"],
+    ["day:thu", "Donderdag"],
+    ["day:fri", "Vrijdag"],
+    ["day:sat", "Zaterdag"],
+    ["day:sun", "Zondag"],
+    ["stage:Main Stage", "Main Stage"],
+    ["stage:The Barn", "The Barn"],
+    ["stage:KluB C", "KluB C"],
+    ["stage:NEST", "NEST"],
+    ["stage:The Towers by Jupiler", "Towers"],
+    ["stage:Het Magazijn", "Magazijn"]
+  ];
+  artistFilters.innerHTML = filters.map(([key, label]) => `<button class="filter ${key === active ? "active" : ""}" data-artist-filter="${key}">${label}</button>`).join("");
+  document.querySelectorAll("[data-artist-filter]").forEach(button => button.addEventListener("click", () => {
+    renderArtists(button.dataset.artistFilter);
   }));
 }
 
-function renderArtists(day = "all") {
-  renderArtistFilters(day);
-  const filtered = artistInfo.filter(artist => day === "all" || artist.day === day);
+function renderArtists(filter = "all") {
+  renderArtistFilters(filter);
+  const filtered = artistInfo.filter(artist => {
+    if (filter === "all") return true;
+    if (filter.startsWith("day:")) return artist.day === filter.slice(4);
+    if (filter.startsWith("stage:")) return artist.stage === filter.slice(6);
+    return true;
+  });
   artistLibrary.innerHTML = filtered.map(artist => `
     <article class="artist-card" data-artist-card="${artist.name}">
-      <div class="meta">${program.find(d => d.key === artist.day).label} · Main Stage · ${artist.time}</div>
+      <div class="meta">${program.find(d => d.key === artist.day).label} · ${artist.stage} · ${artist.time}</div>
       <h3>${artist.name}</h3>
       <p>${artist.bio}</p>
       <div class="songs">
