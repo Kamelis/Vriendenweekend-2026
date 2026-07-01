@@ -238,6 +238,43 @@ h1 {
 .artist-card .meta { color: var(--amber); font-size: .82rem; font-weight: 900; text-transform: uppercase; }
 .artist-card h3 { margin: 0; font-size: 1.35rem; }
 .artist-card p { margin: 0; color: var(--muted); line-height: 1.52; }
+.artist-media {
+  position: relative;
+  height: 176px;
+  margin: -18px -18px 2px;
+  overflow: hidden;
+  background: #0f0f12;
+  border-bottom: 1px solid var(--line);
+}
+.artist-media img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+.artist-fallback {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  color: #111;
+  background: linear-gradient(135deg, var(--green), var(--amber));
+  text-align: center;
+  font-size: 1.08rem;
+  font-weight: 950;
+}
+.artist-image-source {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  padding: 4px 7px;
+  color: #111;
+  background: rgba(255,255,255,.82);
+  border-radius: 999px;
+  font-size: .72rem;
+  font-weight: 900;
+  text-decoration: none;
+}
 .songs { display: grid; gap: 7px; align-self: end; }
 .songs a {
   display: block;
@@ -370,7 +407,7 @@ h1 {
     <div class="stat"><b>Festival</b><span>Rock Werchter 2026</span></div>
     <div class="stat"><b>Dagen</b><span>2, 3, 4 en 5 juli</span></div>
     <div class="stat"><b>Stages</b><span>6 podia in het programma</span></div>
-    <div class="stat"><b>Versie</b><span>2.6.1</span></div>
+    <div class="stat"><b>Versie</b><span>2.7.0</span></div>
   </div>
 </header>
 
@@ -447,11 +484,12 @@ h1 {
 <footer class="footer">
   <div class="wrap">
     <span>Rock Werchter 2026 · programma & fotoarchief</span>
-    <span>Versie 2.6.1</span>
+    <span>Versie 2.7.0</span>
   </div>
 </footer>
 
 <script src="photos.js"></script>
+<script src="artist-images.js"></script>
 <script>
 const program = [
   {
@@ -594,6 +632,7 @@ function buildArtistInfo() {
 }
 
 const artistInfo = buildArtistInfo();
+const artistImages = window.werchterArtistImages || {};
 
 const photos = window.werchterPhotos || [];
 
@@ -631,6 +670,18 @@ function renderProgram(dayKey = "thu") {
   }));
 }
 
+function artistInitials(name) {
+  return name.split(/\s+/).filter(Boolean).slice(0, 3).map(part => part[0]).join("").toUpperCase();
+}
+
+function renderArtistMedia(artist) {
+  const image = artistImages[artist.name];
+  if (!image?.src) {
+    return `<div class="artist-media"><div class="artist-fallback"><span>${artistInitials(artist.name)} · ${artist.name}</span></div></div>`;
+  }
+  return `<div class="artist-media"><img src="${image.src}" alt="${artist.name}" loading="lazy"><a class="artist-image-source" href="${image.source}" target="_blank" rel="noopener">Wikimedia</a></div>`;
+}
+
 function renderArtistFilters(active = "all") {
   const filters = [
     ["all", "Alles"],
@@ -661,6 +712,7 @@ function renderArtists(filter = "all") {
   });
   artistLibrary.innerHTML = filtered.map(artist => `
     <article class="artist-card" data-artist-card="${artist.name}">
+      ${renderArtistMedia(artist)}
       <div class="meta">${program.find(d => d.key === artist.day).label} · ${artist.stage} · ${artist.time}</div>
       <h3>${artist.name}</h3>
       <p>${artist.bio}</p>
