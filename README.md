@@ -1,13 +1,29 @@
 Exit code: 0
 Wall time: 0.2 seconds
 Output:
+Exit code: 0
+Wall time: 0.2 seconds
+Output:
 # Rock Werchter 2026
 
-Static photo site for Rock Werchter 2026.
+Static programme and photo site for Rock Werchter 2026.
 
 ## Content
 
 - Main page: `index.html`
-- Photo assets: `artwork/`
-- Current site version: `2.0.0`
+- Hero asset: `artwork/rock-werchter-hero.jpg`
+- Photo assets: none yet; old friends-weekend photos were removed
+- Current site version: `2.1.0`
 
+## Future photo workflow
+
+When adding new photos, use image recognition to classify:
+
+- day
+- stage
+- artist/band
+- known people
+- tags
+- confidence
+
+Uncertain matches should be marked `te-controleren`.

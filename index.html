@@ -6,53 +6,49 @@ Output:
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rock Werchter 2026 - Foto's</title>
+<title>Rock Werchter 2026 - Foto's & Programma</title>
 <style>
 :root {
-  --ink: #f8f5ef;
-  --muted: #c9c1b5;
-  --soft: #968d82;
-  --night: #111113;
-  --paper: #f4efe5;
-  --coal: #1d1d1f;
-  --line: rgba(248, 245, 239, .2);
-  --green: #2fd36f;
-  --red: #ff4f47;
+  --bg: #0b0b0d;
+  --panel: #17171a;
+  --panel2: #222227;
+  --ink: #f7f3eb;
+  --muted: #bfb8aa;
+  --line: rgba(255,255,255,.14);
+  --green: #2fe070;
   --amber: #ffbf47;
-  --blue: #59a7ff;
+  --red: #ff5148;
+  --blue: #5aa7ff;
+  --paper: #f3eee4;
+  --paperInk: #151517;
 }
-
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
   margin: 0;
   min-height: 100vh;
   color: var(--ink);
-  background: #101010;
+  background: var(--bg);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
-
-body.lightbox-open { overflow: hidden; }
-button, input { font: inherit; }
+button, select, input { font: inherit; }
 button { cursor: pointer; }
 img { max-width: 100%; }
-
+a { color: inherit; }
 .hero {
-  min-height: 92vh;
+  min-height: 90vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
   position: relative;
-  overflow: hidden;
   isolation: isolate;
+  overflow: hidden;
 }
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
   z-index: -2;
-  background: #101010 url("artwork/foto-vriendenweekend-008.jpg") center / cover no-repeat;
-  filter: saturate(1.04) contrast(1.04);
-  transform: scale(1.02);
+  background: #111 url("artwork/rock-werchter-hero.jpg") center / cover no-repeat;
 }
 .hero::after {
   content: "";
@@ -60,83 +56,70 @@ img { max-width: 100%; }
   inset: 0;
   z-index: -1;
   background:
-    linear-gradient(90deg, rgba(10, 10, 10, .86), rgba(10, 10, 10, .44) 54%, rgba(10, 10, 10, .2)),
-    linear-gradient(0deg, rgba(16, 16, 16, 1), rgba(16, 16, 16, .12) 46%, rgba(16, 16, 16, .72));
+    linear-gradient(90deg, rgba(8,8,9,.9), rgba(8,8,9,.52) 52%, rgba(8,8,9,.18)),
+    linear-gradient(0deg, rgba(11,11,13,1), rgba(11,11,13,.1) 48%, rgba(11,11,13,.65));
 }
-
 .nav {
+  width: min(1240px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 18px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 18px;
-  width: min(1180px, calc(100% - 32px));
-  margin: 0 auto;
-  padding: 18px 0;
 }
 .brand {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-weight: 900;
+  font-weight: 950;
   text-transform: uppercase;
 }
 .mark {
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
   display: grid;
   place-items: center;
-  color: #111;
+  color: #0b0b0d;
   background: var(--green);
-  border: 2px solid rgba(255,255,255,.78);
   border-radius: 50%;
-  font-weight: 900;
+  border: 2px solid rgba(255,255,255,.82);
 }
-.navlinks {
-  display: flex;
-  gap: 6px;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-}
+.navlinks { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
 .navlinks a {
-  color: var(--ink);
   text-decoration: none;
+  padding: 9px 13px;
   border: 1px solid rgba(255,255,255,.22);
   border-radius: 999px;
-  padding: 9px 13px;
-  background: rgba(16,16,16,.26);
+  background: rgba(10,10,10,.28);
   backdrop-filter: blur(8px);
 }
-.navlinks a:hover { border-color: rgba(255,255,255,.55); }
-
 .hero-copy {
-  width: min(1180px, calc(100% - 32px));
+  width: min(1240px, calc(100% - 32px));
   margin: auto;
-  padding: 68px 0 88px;
+  padding: 62px 0 90px;
 }
 .kicker {
   display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  color: var(--night);
+  color: #111;
   background: var(--amber);
-  border: 1px solid rgba(255,255,255,.55);
   border-radius: 999px;
-  padding: 8px 13px;
-  font-weight: 800;
+  padding: 8px 14px;
+  font-weight: 900;
 }
-.hero h1 {
-  max-width: 840px;
+h1 {
+  max-width: 880px;
   margin: 22px 0 16px;
-  font-size: 4.75rem;
-  line-height: .96;
-  font-weight: 950;
+  font-size: clamp(2.6rem, 8vw, 5.6rem);
+  line-height: .94;
+  letter-spacing: -1px;
 }
-.hero p {
-  max-width: 620px;
+.hero-copy p {
+  max-width: 690px;
   margin: 0;
   color: var(--muted);
   font-size: 1.16rem;
-  line-height: 1.6;
+  line-height: 1.62;
 }
 .hero-actions {
   display: flex;
@@ -150,20 +133,16 @@ img { max-width: 100%; }
   justify-content: center;
   min-height: 44px;
   padding: 0 18px;
-  color: var(--night);
+  color: #101010;
   background: var(--green);
-  border: 1px solid rgba(255,255,255,.45);
+  border: 1px solid rgba(255,255,255,.55);
   border-radius: 999px;
-  font-weight: 850;
+  font-weight: 900;
   text-decoration: none;
 }
-.btn.secondary {
-  color: var(--ink);
-  background: rgba(255,255,255,.1);
-}
-
-.quickbar {
-  width: min(1180px, calc(100% - 32px));
+.btn.secondary { color: var(--ink); background: rgba(255,255,255,.1); }
+.stats {
+  width: min(1240px, calc(100% - 32px));
   margin: 0 auto 18px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -171,251 +150,160 @@ img { max-width: 100%; }
   background: rgba(15,15,15,.72);
   backdrop-filter: blur(10px);
 }
-.quick {
-  padding: 18px;
-  border-right: 1px solid var(--line);
-}
-.quick:last-child { border-right: 0; }
-.quick b {
-  display: block;
-  font-size: .78rem;
-  color: var(--soft);
-  text-transform: uppercase;
-}
-.quick span {
-  display: block;
-  margin-top: 4px;
-  font-size: 1.05rem;
-  font-weight: 800;
-}
-
-.band {
-  padding: 72px 0;
-}
-.band.alt {
-  background: var(--paper);
-  color: var(--night);
-}
-.wrap {
-  width: min(1180px, calc(100% - 32px));
-  margin: 0 auto;
-}
+.stat { padding: 18px; border-right: 1px solid var(--line); }
+.stat:last-child { border-right: 0; }
+.stat b { display: block; color: #9f978b; font-size: .78rem; text-transform: uppercase; }
+.stat span { display: block; margin-top: 4px; font-weight: 900; }
+.band { padding: 72px 0; }
+.band.alt { color: var(--paperInk); background: var(--paper); }
+.wrap { width: min(1240px, calc(100% - 32px)); margin: 0 auto; }
 .section-head {
   display: flex;
   align-items: end;
   justify-content: space-between;
   gap: 28px;
-  margin-bottom: 28px;
+  margin-bottom: 26px;
 }
-.section-head h2 {
-  margin: 0;
-  font-size: 2.35rem;
-  line-height: 1.05;
-}
-.section-head p {
-  max-width: 520px;
-  margin: 0;
-  color: currentColor;
-  opacity: .72;
-  line-height: 1.55;
-}
-
-.filters {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin-bottom: 22px;
-}
-.filter {
+.section-head h2 { margin: 0; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.04; }
+.section-head p { max-width: 610px; margin: 0; color: currentColor; opacity: .72; line-height: 1.55; }
+.toolbar { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; }
+.chip, .filter {
   min-height: 38px;
   padding: 0 14px;
   color: var(--ink);
-  background: #222;
-  border: 1px solid rgba(255,255,255,.2);
+  background: var(--panel2);
+  border: 1px solid var(--line);
   border-radius: 999px;
-  font-weight: 800;
+  font-weight: 850;
 }
-.filter.active {
-  color: var(--night);
-  background: var(--amber);
-}
-
-.gallery {
+.chip.active, .filter.active { color: #111; background: var(--amber); border-color: transparent; }
+.program {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 14px;
+  grid-template-columns: 250px 1fr;
+  gap: 18px;
 }
-.photo {
-  position: relative;
-  min-height: 270px;
-  overflow: hidden;
-  border: 0;
-  border-radius: 8px;
-  padding: 0;
+.daylist {
+  position: sticky;
+  top: 14px;
+  align-self: start;
+  display: grid;
+  gap: 10px;
+}
+.daybtn {
+  padding: 14px;
   color: var(--ink);
-  background: #222;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
   text-align: left;
+  font-weight: 900;
 }
-.photo:nth-child(3n+1) { grid-row: span 2; min-height: 430px; }
-.photo img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-  transition: transform .35s ease;
+.daybtn span { display: block; margin-top: 4px; color: var(--muted); font-size: .9rem; font-weight: 600; }
+.daybtn.active { color: #111; background: var(--green); border-color: transparent; }
+.stages { display: grid; gap: 14px; }
+.stage {
+  border: 1px solid rgba(0,0,0,.16);
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
 }
-.photo:hover img { transform: scale(1.04); }
-.photo figcaption {
-  position: absolute;
-  inset: auto 0 0 0;
-  padding: 52px 14px 14px;
-  background: linear-gradient(0deg, rgba(0,0,0,.82), rgba(0,0,0,0));
+.stage h3 {
+  margin: 0;
+  padding: 14px 16px;
+  color: #111;
+  background: linear-gradient(90deg, var(--green), var(--amber));
 }
-.photo strong {
-  display: block;
-  font-size: 1rem;
-}
-.photo span {
-  display: block;
-  margin-top: 4px;
-  color: rgba(255,255,255,.78);
-  font-size: .86rem;
-}
-
-.days {
+.slot {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 132px 1fr;
+  gap: 12px;
+  padding: 13px 16px;
+  border-top: 1px solid rgba(0,0,0,.1);
+}
+.time { color: #626267; font-weight: 900; }
+.artist { font-weight: 900; }
+.artist small { display: block; color: #6c6c72; font-weight: 600; margin-top: 3px; }
+.artist a { color: #101010; text-decoration-color: rgba(0,0,0,.28); }
+.library {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
 }
-.day {
-  min-height: 230px;
+.artist-card {
+  display: grid;
+  gap: 12px;
+  min-height: 310px;
+  padding: 18px;
+  border-radius: 8px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+}
+.artist-card .meta { color: var(--amber); font-size: .82rem; font-weight: 900; text-transform: uppercase; }
+.artist-card h3 { margin: 0; font-size: 1.35rem; }
+.artist-card p { margin: 0; color: var(--muted); line-height: 1.52; }
+.songs { display: grid; gap: 7px; align-self: end; }
+.songs a {
+  display: block;
+  padding: 8px 10px;
+  color: var(--ink);
+  background: rgba(255,255,255,.08);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  text-decoration: none;
+}
+.photos-empty {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 22px;
+  align-items: stretch;
+}
+.drop {
+  min-height: 300px;
+  display: grid;
+  place-items: center;
+  border: 2px dashed rgba(0,0,0,.25);
+  border-radius: 8px;
+  background: rgba(255,255,255,.62);
+  text-align: center;
+  padding: 28px;
+}
+.drop h3 { margin: 0 0 8px; font-size: 1.6rem; }
+.drop p { margin: 0; max-width: 520px; color: #4f4f55; line-height: 1.55; }
+.rules {
   padding: 22px;
   border-radius: 8px;
-  color: var(--night);
-  background: #fff;
-  border-top: 8px solid var(--green);
+  color: var(--ink);
+  background: #151517;
 }
-.day:nth-child(2) { border-color: var(--red); }
-.day:nth-child(3) { border-color: var(--blue); }
-.day:nth-child(4) { border-color: var(--amber); }
-.day .date {
-  color: #606065;
-  font-weight: 850;
-}
-.day h3 {
-  margin: 10px 0 12px;
-  font-size: 1.45rem;
-}
-.day ul {
-  margin: 0;
-  padding-left: 18px;
-  line-height: 1.6;
-  color: #3b3b3e;
-}
-
-.strip {
+.rules h3 { margin: 0 0 12px; }
+.rules ul { margin: 0; padding-left: 20px; color: var(--muted); line-height: 1.65; }
+.sources {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 28px;
-  align-items: center;
-}
-.strip img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  border-radius: 8px;
-}
-.strip h2 {
-  margin: 0 0 14px;
-  font-size: 2.25rem;
-}
-.strip p {
-  margin: 0 0 18px;
+  gap: 10px;
   color: var(--muted);
-  line-height: 1.65;
 }
-.watchlist {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-.watchlist span {
-  padding: 8px 11px;
-  color: var(--night);
-  background: var(--ink);
-  border-radius: 999px;
-  font-weight: 850;
-}
-
+.sources a { color: var(--ink); }
 .footer {
   padding: 26px 0;
   color: var(--muted);
-  background: #0b0b0c;
-  border-top: 1px solid rgba(255,255,255,.12);
+  background: #080809;
+  border-top: 1px solid var(--line);
 }
-.footer .wrap {
-  display: flex;
-  justify-content: space-between;
-  gap: 18px;
-  flex-wrap: wrap;
-}
-
-.lightbox {
-  position: fixed;
-  inset: 0;
-  z-index: 90;
-  display: none;
-  place-items: center;
-  padding: 20px;
-  background: rgba(0,0,0,.9);
-}
-.lightbox.open { display: grid; }
-.lightbox-inner {
-  width: min(1100px, 100%);
-}
-.lightbox img {
-  width: 100%;
-  max-height: 78vh;
-  object-fit: contain;
-  border-radius: 8px;
-  background: #000;
-}
-.lightbox-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  margin-top: 12px;
-  color: var(--ink);
-}
-.close {
-  min-width: 44px;
-  height: 44px;
-  color: var(--ink);
-  background: #222;
-  border: 1px solid rgba(255,255,255,.28);
-  border-radius: 50%;
-}
-
-@media (max-width: 860px) {
-  .hero h1 { font-size: 3.2rem; }
-  .quickbar, .days, .strip { grid-template-columns: 1fr; }
-  .quick { border-right: 0; border-bottom: 1px solid var(--line); }
-  .quick:last-child { border-bottom: 0; }
-  .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .photo, .photo:nth-child(3n+1) { min-height: 260px; grid-row: auto; }
+.footer .wrap { display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
+@media (max-width: 980px) {
+  .stats, .program, .library, .photos-empty { grid-template-columns: 1fr; }
+  .stat { border-right: 0; border-bottom: 1px solid var(--line); }
+  .stat:last-child { border-bottom: 0; }
+  .daylist { position: static; grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .section-head { display: block; }
   .section-head p { margin-top: 12px; }
 }
-
 @media (max-width: 560px) {
   .nav { align-items: flex-start; flex-direction: column; }
   .navlinks { justify-content: flex-start; }
-  .hero-copy { padding-top: 38px; }
-  .hero h1 { font-size: 2.45rem; }
-  .hero p { font-size: 1rem; }
-  .gallery { grid-template-columns: 1fr; }
-  .band { padding: 48px 0; }
+  .hero-copy { padding-top: 42px; }
+  .slot { grid-template-columns: 1fr; gap: 4px; }
+  .daylist { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -424,114 +312,92 @@ img { max-width: 100%; }
   <nav class="nav" aria-label="Hoofdnavigatie">
     <div class="brand"><span class="mark">RW</span><span>Rock Werchter 2026</span></div>
     <div class="navlinks">
-      <a href="#gallery">Foto's</a>
-      <a href="#dagen">Dagen</a>
-      <a href="#lineup">Line-up</a>
+      <a href="#programma">Programma</a>
+      <a href="#mainstage">Main Stage</a>
+      <a href="#fotos">Foto's</a>
+      <a href="#bronnen">Bronnen</a>
     </div>
   </nav>
-
   <div class="hero-copy">
     <div class="kicker">2 - 5 juli 2026 · Festivalpark Werchter</div>
-    <h1>Rock Werchter 2026 fotoarchief</h1>
-    <p>Een nieuwe plek voor alle festivalfoto's, backstage-momenten, groepsbeelden en late-night herinneringen. Klaar voor Werchter, klaar voor de eerste upload.</p>
+    <h1>Programma, Main Stage-bibliografie en fotoarchief</h1>
+    <p>De oude vriendenfoto's zijn verwijderd. Deze site is nu een schone Rock Werchter 2026-hub met het volledige festivalprogramma, Main Stage-artiesten, Spotify-nummers en een lege foto-inbox die klaarstaat voor automatische tagging.</p>
     <div class="hero-actions">
-      <a class="btn" href="#gallery">Open de foto's</a>
-      <a class="btn secondary" href="#dagen">Bekijk de dagen</a>
+      <a class="btn" href="#programma">Open programma</a>
+      <a class="btn secondary" href="#mainstage">Main Stage-artiesten</a>
     </div>
   </div>
-
-  <div class="quickbar" aria-label="Festivalinformatie">
-    <div class="quick"><b>Datum</b><span>2 t/m 5 juli 2026</span></div>
-    <div class="quick"><b>Locatie</b><span>Festivalpark Werchter</span></div>
-    <div class="quick"><b>Modus</b><span>Foto's per dag filteren</span></div>
-    <div class="quick"><b>Versie</b><span>2.0.0</span></div>
+  <div class="stats">
+    <div class="stat"><b>Festival</b><span>Rock Werchter 2026</span></div>
+    <div class="stat"><b>Dagen</b><span>2, 3, 4 en 5 juli</span></div>
+    <div class="stat"><b>Stages</b><span>6 podia in het programma</span></div>
+    <div class="stat"><b>Versie</b><span>2.1.0</span></div>
   </div>
 </header>
 
 <main>
-  <section class="band" id="gallery">
+  <section class="band alt" id="programma">
     <div class="wrap">
       <div class="section-head">
-        <h2>Festivalalbum</h2>
-        <p>De oude vriendenweekend-site is omgebouwd naar een Werchter-fotosite. De huidige foto's vormen de startcollectie; nieuwe beelden kunnen straks per dag of moment worden toegevoegd.</p>
+        <h2>Volledig programma</h2>
+        <p>Gebaseerd op de officiële timetable van Rock Werchter, opgehaald op 1 juli 2026. De line-up kan nog wijzigen; de site bevat daarom ook bronlinks naar de dagpagina's.</p>
       </div>
-      <div class="filters" aria-label="Fotofilters">
-        <button class="filter active" data-filter="all">Alles</button>
-        <button class="filter" data-filter="donderdag">Donderdag</button>
-        <button class="filter" data-filter="vrijdag">Vrijdag</button>
-        <button class="filter" data-filter="zaterdag">Zaterdag</button>
-        <button class="filter" data-filter="zondag">Zondag</button>
-        <button class="filter" data-filter="crew">Crew</button>
-      </div>
-      <div class="gallery" id="photoGrid"></div>
-    </div>
-  </section>
-
-  <section class="band alt" id="dagen">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>Vier dagen Werchter</h2>
-        <p>Compacte dagindeling voor de fotoverzameling. Zodra de eerste echte Werchter-foto's binnenkomen, kunnen ze direct aan de juiste dag worden gehangen.</p>
-      </div>
-      <div class="days">
-        <article class="day">
-          <div class="date">Donderdag 2 juli</div>
-          <h3>Openingsdag</h3>
-          <ul>
-            <li>Aankomst en eerste rondje terrein</li>
-            <li>Main Stage startmomenten</li>
-            <li>Nachtfoto's na de headliner</li>
-          </ul>
-        </article>
-        <article class="day">
-          <div class="date">Vrijdag 3 juli</div>
-          <h3>Volle bak</h3>
-          <ul>
-            <li>Groepsfoto's voor het terrein</li>
-            <li>Food, drinks en de beste spot</li>
-            <li>The Barn en Main Stage highlights</li>
-          </ul>
-        </article>
-        <article class="day">
-          <div class="date">Zaterdag 4 juli</div>
-          <h3>Peak Werchter</h3>
-          <ul>
-            <li>Middag in de zon</li>
-            <li>Festivalvrienden en onverwachte ontmoetingen</li>
-            <li>Late-night crowd shots</li>
-          </ul>
-        </article>
-        <article class="day">
-          <div class="date">Zondag 5 juli</div>
-          <h3>Finale</h3>
-          <ul>
-            <li>Laatste festivaldag</li>
-            <li>Favoriete foto van het weekend</li>
-            <li>Afsluiter en terugblik</li>
-          </ul>
-        </article>
+      <div class="program">
+        <div class="daylist" id="dayList"></div>
+        <div class="stages" id="stageList"></div>
       </div>
     </div>
   </section>
 
-  <section class="band" id="lineup">
-    <div class="wrap strip">
-      <img src="artwork/foto-vriendenweekend-005.jpg" alt="Sfeerbeeld voor Rock Werchter 2026">
-      <div>
-        <h2>Line-up om naar uit te kijken</h2>
-        <p>De site is bewust foto-first, maar de grote namen mogen alvast als ankerpunt in beeld. De dagfoto's kunnen straks rond deze momenten worden opgebouwd.</p>
-        <div class="watchlist">
-          <span>Mumford & Sons</span>
-          <span>The Prodigy</span>
-          <span>The xx</span>
-          <span>Gorillaz</span>
-          <span>Twenty One Pilots</span>
-          <span>The Cure</span>
-          <span>Moby</span>
-          <span>Lewis Capaldi</span>
-          <span>Halsey</span>
-          <span>The War on Drugs</span>
+  <section class="band" id="mainstage">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Main Stage-bibliografie</h2>
+        <p>Korte biografie per Main Stage-act met Spotify-zoeklinks naar bekende, veelbeluisterde nummers. De links zoeken direct in Spotify, zodat ze blijven werken als Spotify zelf zijn populariteitsrangorde wijzigt.</p>
+      </div>
+      <div class="toolbar" id="artistFilters"></div>
+      <div class="library" id="artistLibrary"></div>
+    </div>
+  </section>
+
+  <section class="band alt" id="fotos">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Foto-inbox</h2>
+        <p>Er staan bewust nog geen foto's op de site. Bij nieuwe uploads vul ik per foto automatisch dag, podium, artiest/personen en tags aan waar dat herkenbaar is.</p>
+      </div>
+      <div class="photos-empty">
+        <div class="drop">
+          <div>
+            <h3>Nog geen Werchter-foto's toegevoegd</h3>
+            <p>De oude vriendenweekend-foto's zijn uit de site verwijderd. Nieuwe foto's kunnen straks als echte Werchter-beelden worden toegevoegd en automatisch worden gecategoriseerd.</p>
+          </div>
         </div>
+        <div class="rules">
+          <h3>Auto-categorisatie bij nieuwe foto's</h3>
+          <ul>
+            <li>Herken podium/context: Main Stage, The Barn, KluB C, NEST, Towers of Magazijn.</li>
+            <li>Herken artiesten via visuele aanwijzingen, bestandsnaam, uploadtekst en programma-tijden.</li>
+            <li>Herken personen/groep wanneer gezichten of namen eerder bekend zijn; onzekere matches markeren als "te controleren".</li>
+            <li>Vul tags als dag, moment, artiest, personen, sfeer, food/drinks en favoriet automatisch aan.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="bronnen">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Bronnen</h2>
+        <p>Programma en festivaldata zijn brongebaseerd. Spotify-links zijn zoeklinks naar nummers/artiesten, geen harde streamranglijst.</p>
+      </div>
+      <div class="sources">
+        <a href="https://www.rockwerchter.be/en/line-up/thursday/schedule">Rock Werchter donderdag timetable</a>
+        <a href="https://www.rockwerchter.be/en/line-up/friday/schedule">Rock Werchter vrijdag timetable</a>
+        <a href="https://www.rockwerchter.be/en/line-up/saturday/schedule">Rock Werchter zaterdag timetable</a>
+        <a href="https://www.rockwerchter.be/en/line-up/sunday/schedule">Rock Werchter zondag timetable</a>
+        <a href="https://www.rockwerchter.be/en/">Rock Werchter festivalinfo</a>
       </div>
     </div>
   </section>
@@ -539,96 +405,177 @@ img { max-width: 100%; }
 
 <footer class="footer">
   <div class="wrap">
-    <span>Rock Werchter 2026 · fotoarchief</span>
-    <span>Versie 2.0.0</span>
+    <span>Rock Werchter 2026 · programma & fotoarchief</span>
+    <span>Versie 2.1.0</span>
   </div>
 </footer>
 
-<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Foto bekijken">
-  <div class="lightbox-inner">
-    <img id="lightboxImage" alt="">
-    <div class="lightbox-bar">
-      <div>
-        <strong id="lightboxTitle"></strong>
-        <div id="lightboxMeta"></div>
-      </div>
-      <button class="close" id="closeLightbox" aria-label="Sluiten">×</button>
-    </div>
-  </div>
-</div>
-
 <script>
-const photos = [
-  { src: "artwork/foto-vriendenweekend-001.jpg", day: "donderdag", title: "Aankomstgevoel", meta: "Donderdag · eerste lichting" },
-  { src: "artwork/foto-vriendenweekend-002.jpg", day: "vrijdag", title: "In de flow", meta: "Vrijdag · terreinmoment" },
-  { src: "artwork/foto-vriendenweekend-003.jpg", day: "zaterdag", title: "Weekendcrew", meta: "Zaterdag · crew" },
-  { src: "artwork/foto-vriendenweekend-004.jpg", day: "zondag", title: "Laatste ronde", meta: "Zondag · terugblik" },
-  { src: "artwork/foto-vriendenweekend-005.jpg", day: "crew", title: "Groepsbeeld", meta: "Crew · favoriet" },
-  { src: "artwork/foto-vriendenweekend-006.jpg", day: "vrijdag", title: "Tussen de sets", meta: "Vrijdag · pauzemoment" },
-  { src: "artwork/foto-vriendenweekend-007.jpg", day: "zaterdag", title: "Golden hour", meta: "Zaterdag · avondlicht" },
-  { src: "artwork/foto-vriendenweekend-008.jpg", day: "crew", title: "De startcollectie", meta: "Crew · albumcover" }
+const program = [
+  {
+    key: "thu",
+    label: "Donderdag 2 juli",
+    source: "https://www.rockwerchter.be/en/line-up/thursday/schedule",
+    stages: {
+      "Main Stage": [["13.00 - 13.40", "Yong Yello"], ["14.20 - 15.20", "Zwangere Guy"], ["16.00 - 17.00", "Triggerfinger"], ["17.40 - 18.40", "Kasabian"], ["19.20 - 20.20", "The Lumineers"], ["21.15 - 22.30", "The War on Drugs"], ["23.30 - 1.00", "Mumford & Sons"]],
+      "The Barn": [["13.00 - 13.30", "Balu Brigada"], ["14.05 - 15.05", "All Them Witches"], ["15.50 - 16.50", "The Vaccines"], ["17.50 - 18.50", "Loyle Carner"], ["19.50 - 20.50", "JADE"], ["21.50 - 23.05", "The Prodigy"]],
+      "KluB C": [["13.30 - 14.05", "Monza"], ["15.05 - 15.50", "Bente"], ["16.50 - 17.50", "Yard Act"], ["18.50 - 19.50", "Dylan Gossett"], ["20.50 - 21.50", "Tom Smith"], ["23.05 - 0.25", "Blood Incantation"]],
+      "NEST": [["13.40 - 14.15", "Ben Ellis"], ["15.20 - 15.55", "Basht."], ["17.00 - 17.35", "LA LOM"], ["18.40 - 19.15", "Karen Dió"], ["20.20 - 21.10", "PUP"], ["22.30 - 23.25", "Midnight Generation"]],
+      "The Towers by Jupiler": [["13.40 - 14.10", "Lovelee Days"], ["15.20 - 15.50", "Comrad"], ["17.00 - 17.30", "Billy"], ["18.40 - 19.10", "Jeroen Delodder b2b Neon"], ["20.20 - 21.05", "EMILIJA"], ["22.30 - 23.20", "Yves Deruyter"]],
+      "Het Magazijn": [["14.00 - 16.00", "Maraschino"], ["16.00 - 17.30", "Le Swamp (Jan Paternoster)"], ["17.30 - 19.30", "Mirage"], ["19.30 - 21.30", "BAVR b2b DC Noises"], ["21.30 - 23.00", "DJ Chibi Ichigo"]]
+    }
+  },
+  {
+    key: "fri",
+    label: "Vrijdag 3 juli",
+    source: "https://www.rockwerchter.be/en/line-up/friday/schedule",
+    stages: {
+      "Main Stage": [["13.00 - 13.40", "Kingfishr"], ["14.15 - 15.00", "Wolf Alice"], ["15.35 - 16.35", "The Last Dinner Party"], ["17.15 - 18.15", "Royel Otis"], ["19.00 - 20.00", "Teddy Swims"], ["21.00 - 22.30", "Lewis Capaldi"], ["23.30 - 0.45", "The xx"]],
+      "The Barn": [["13.00 - 13.45", "Good Neighbours"], ["14.20 - 15.20", "Social Distortion"], ["15.55 - 16.55", "Viagra Boys"], ["17.45 - 18.45", "Franz Ferdinand"], ["19.40 - 21.05", "FKA twigs"], ["22.00 - 23.15", "Charlotte de Witte"]],
+      "KluB C": [["13.45 - 14.20", "ISE"], ["15.20 - 15.55", "High Hi"], ["16.55 - 17.45", "Paris Paloma"], ["18.45 - 19.45", "Kae Tempest"], ["21.00 - 22.00", "Agnes Obel"], ["23.15 - 0.15", "Lauren Spencer Smith"]],
+      "NEST": [["13.40 - 14.10", "overpass"], ["15.00 - 15.30", "Cardinals"], ["16.35 - 17.10", "Keo"], ["18.15 - 18.55", "Scene Queen"], ["20.00 - 20.55", "Radio Free Alice"], ["22.30 - 23.25", "The Warning"]],
+      "The Towers by Jupiler": [["13.40 - 14.05", "Many More"], ["15.00 - 15.25", "ROM¥"], ["16.35 - 17.05", "Deco b2b Mosoo"], ["18.15 - 18.50", "MATTN"], ["20.00 - 20.50", "Henri PFR"], ["22.30 - 23.20", "Viktor"]],
+      "Het Magazijn": [["14.00 - 16.00", "She The DJ"], ["16.00 - 18.00", "Jens De Ruyte (SONS)"], ["18.00 - 19.00", "MEROL (Ratkapje)"], ["19.00 - 21.00", "Helena Lauwaert"], ["21.00 - 23.00", "Mickael Karkousse b2b John Noseda"]]
+    }
+  },
+  {
+    key: "sat",
+    label: "Zaterdag 4 juli",
+    source: "https://www.rockwerchter.be/en/line-up/saturday/schedule",
+    stages: {
+      "Main Stage": [["13.00 - 13.40", "LANDMVRKS"], ["14.10 - 14.55", "Palaye Royale"], ["15.30 - 16.30", "Kneecap"], ["17.10 - 18.10", "Reneé Rapp"], ["18.55 - 19.55", "Halsey"], ["20.55 - 22.25", "Gorillaz"], ["23.25 - 1.00", "Twenty One Pilots"]],
+      "The Barn": [["13.00 - 13.40", "Harry Mack"], ["14.25 - 15.15", "Dogstar"], ["16.00 - 17.00", "The Haunted Youth"], ["18.00 - 19.00", "Beirut"], ["20.00 - 21.00", "Matt Berninger"], ["22.00 - 23.15", "Pixies"]],
+      "KluB C": [["13.40 - 14.25", "Linka Moja"], ["15.15 - 16.00", "Adrian Quesada's Trio Asesino"], ["17.00 - 18.00", "Don West"], ["18.45 - 19.45", "Kokoroko"], ["20.35 - 21.35", "VOILÀ"], ["22.25 - 23.25", "CMAT"]],
+      "NEST": [["13.40 - 14.05", "The New Eves"], ["14.55 - 15.25", "Man/Woman/Chainsaw"], ["16.30 - 17.05", "Bleech 9:3"], ["18.10 - 18.50", "Florence Road"], ["19.55 - 20.35", "Ecca Vandal"], ["22.25 - 23.20", "The Reytons"]],
+      "The Towers by Jupiler": [["13.40 - 14.00", "DINO"], ["14.55 - 15.20", "Isa Roos"], ["16.30 - 17.00", "Paul Elstak ft. Jebroer"], ["18.10 - 18.45", "Karakals"], ["19.55 - 20.45", "Nina Black"], ["22.25 - 23.15", "MAE.LIE b2b Synoxis"]],
+      "Het Magazijn": [["14.00 - 16.00", "Kids With Buns (DJ set)"], ["16.00 - 18.00", "Hakimm"], ["18.00 - 20.00", "Aili & Orson (DJ set)"], ["20.00 - 21.30", "Alycia Bezgo"], ["21.30 - 23.00", "Boy & Girl"]]
+    }
+  },
+  {
+    key: "sun",
+    label: "Zondag 5 juli",
+    source: "https://www.rockwerchter.be/en/line-up/sunday/schedule",
+    stages: {
+      "Main Stage": [["13.00 - 13.35", "Kaat Van Stralen"], ["14.05 - 14.45", "Bad Nerves"], ["15.15 - 15.55", "SONS"], ["16.35 - 17.35", "Rise Against"], ["18.20 - 19.20", "A Perfect Circle"], ["20.10 - 21.40", "Moby"], ["22.30 - 0.45", "The Cure"]],
+      "The Barn": [["13.00 - 13.30", "Darren Kiely"], ["14.00 - 14.50", "Sierra Ferrell"], ["15.30 - 16.30", "Cory Wong"], ["17.10 - 18.10", "Mogwai"], ["19.10 - 20.20", "David Byrne"], ["21.20 - 22.50", "Paul Kalkbrenner"]],
+      "KluB C": [["13.30 - 14.00", "Tsar B"], ["14.50 - 15.30", "Dressed Like Boys"], ["16.30 - 17.10", "Jessie Murph"], ["18.10 - 19.10", "Joy Crookes"], ["20.20 - 21.20", "Ethel Cain"], ["22.50 - 23.50", "HAEVN"]],
+      "NEST": [["13.35 - 14.00", "Chezile"], ["14.45 - 15.15", "Westside Cowboy"], ["15.55 - 16.30", "NewDad"], ["17.35 - 18.15", "Last Train"], ["19.20 - 20.05", "House Of Protection"], ["21.40 - 22.25", "Psychonaut"]],
+      "The Towers by Jupiler": [["13.35 - 13.55", "Diètro"], ["14.45 - 15.10", "Palmera"], ["15.55 - 16.25", "La Fuente"], ["17.35 - 18.10", "DJ F.R.A.N.K."], ["19.20 - 20.00", "Jordy"], ["21.40 - 22.20", "Lennert Wolfs"]],
+      "Het Magazijn": [["14.00 - 16.00", "Kleinefrigo"], ["16.00 - 18.00", "JANUS"], ["18.00 - 20.00", "Séa"], ["20.00 - 21.30", "Prinsezy"], ["21.30 - 23.00", "Charlotte Adigéry"]]
+    }
+  }
 ];
 
-const grid = document.getElementById("photoGrid");
-const buttons = [...document.querySelectorAll(".filter")];
-const lightbox = document.getElementById("lightbox");
-const lightboxImage = document.getElementById("lightboxImage");
-const lightboxTitle = document.getElementById("lightboxTitle");
-const lightboxMeta = document.getElementById("lightboxMeta");
-const closeLightbox = document.getElementById("closeLightbox");
+const artistInfo = [
+  ["Yong Yello", "thu", "13.00 - 13.40", "Belgische rapper, producer en storyteller die persoonlijke teksten koppelt aan warme hiphopproductie.", ["Als Ge Slaapt", "Luchtkasteel", "Cirkels"]],
+  ["Zwangere Guy", "thu", "14.20 - 15.20", "Brusselse hiphopstem met scherpe teksten, rauwe energie en een sterke live-reputatie.", ["Gorik Pt. 1", "Wie Is Guy?", "ZG Is Zo Dood"]],
+  ["Triggerfinger", "thu", "16.00 - 17.00", "Antwerpse rockband rond Ruben Block, bekend om strakke riffs en stijlvolle live-sets.", ["I Follow Rivers", "All This Dancin' Around", "Soon"]],
+  ["Kasabian", "thu", "17.40 - 18.40", "Britse festivalrockband die indie, elektronica en stadionrefreinen combineert.", ["Fire", "Club Foot", "Underdog"]],
+  ["The Lumineers", "thu", "19.20 - 20.20", "Amerikaanse folkrockband met grote samenzang, akoestische drive en verhalende songs.", ["Ho Hey", "Ophelia", "Cleopatra"]],
+  ["The War on Drugs", "thu", "21.15 - 22.30", "Amerikaanse band rond Adam Granduciel, met dromerige heartlandrock en gelaagde gitaren.", ["Red Eyes", "Under The Pressure", "I Don't Live Here Anymore"]],
+  ["Mumford & Sons", "thu", "23.30 - 1.00", "Britse folkrock-headliner die banjo, stadionhooks en meezingbare refreinen groot maakte.", ["I Will Wait", "Little Lion Man", "The Cave"]],
+  ["Kingfishr", "fri", "13.00 - 13.40", "Ierse folkpopband met grote melodieën en organische live-arrangementen.", ["Killeagh", "Shot In The Dark", "Eyes Don't Lie"]],
+  ["Wolf Alice", "fri", "14.15 - 15.00", "Britse alternatieve rockband die shoegaze, punk en dromerige pop soepel mengt.", ["Don't Delete The Kisses", "Bros", "The Last Man On Earth"]],
+  ["The Last Dinner Party", "fri", "15.35 - 16.35", "Britse artrockband met dramatische pop, theatrale vocals en glamoureuze gitaararrangementen.", ["Nothing Matters", "Sinner", "Caesar on a TV Screen"]],
+  ["Royel Otis", "fri", "17.15 - 18.15", "Australisch indieduo met zonnige gitaren, luchtige hooks en laidback melodieën.", ["Oysters In My Pocket", "Sofa King", "Murder on the Dancefloor"]],
+  ["Teddy Swims", "fri", "19.00 - 20.00", "Amerikaanse zanger met soulvolle stem, pophooks en gospelachtige intensiteit.", ["Lose Control", "The Door", "Bad Dreams"]],
+  ["Lewis Capaldi", "fri", "21.00 - 22.30", "Schotse singer-songwriter, bekend om grote ballads en zelfrelativerende podiumhumor.", ["Someone You Loved", "Before You Go", "Wish You The Best"]],
+  ["The xx", "fri", "23.30 - 0.45", "Londens trio met minimalistische indiepop, elektronische ruimte en fluisterende vocalen.", ["Intro", "Crystalised", "Angels"]],
+  ["LANDMVRKS", "sat", "13.00 - 13.40", "Franse metalcoreband met scherpe breaks, melodische hooks en energieke pitmomenten.", ["Lost In A Wave", "Creature", "Self-Made Black Hole"]],
+  ["Palaye Royale", "sat", "14.10 - 14.55", "Canadees-Amerikaanse rockband met glamrock-attitude en theatrale liveshows.", ["Lonely", "Mr. Doctor Man", "You'll Be Fine"]],
+  ["Kneecap", "sat", "15.30 - 16.30", "Noord-Ierse hiphopgroep die Iers en Engels mixt met politiek geladen, explosieve sets.", ["H.O.O.D", "Better Way To Live", "Get Your Brits Out"]],
+  ["Reneé Rapp", "sat", "17.10 - 18.10", "Amerikaanse popzangeres en actrice met krachtige vocals en emotionele pop-anthems.", ["Tummy Hurts", "Snow Angel", "Too Well"]],
+  ["Halsey", "sat", "18.55 - 19.55", "Amerikaanse popartiest die alt-pop, rock en elektronische invloeden met persoonlijke teksten verbindt.", ["Without Me", "Colors", "Bad At Love"]],
+  ["Gorillaz", "sat", "20.55 - 22.25", "Virtuele band van Damon Albarn en Jamie Hewlett, met hiphop, dub, pop en gastvocalen.", ["Feel Good Inc.", "Clint Eastwood", "DARE"]],
+  ["Twenty One Pilots", "sat", "23.25 - 1.00", "Amerikaans duo dat alt-pop, rap, rock en elektronische productie in theatrale shows giet.", ["Stressed Out", "Ride", "Heathens"]],
+  ["Kaat Van Stralen", "sun", "13.00 - 13.35", "Belgische artiest met Nederlandstalige songs, scherpe energie en groeiende live-aanhang.", ["Stop Met Wenen", "Pater Familias", "Honger"]],
+  ["Bad Nerves", "sun", "14.05 - 14.45", "Britse punkrockband met snelle songs, garage-energie en powerpopmelodieën.", ["Baby Drummer", "Can't Be Mine", "You've Got The Nerve"]],
+  ["SONS", "sun", "15.15 - 15.55", "Belgische garagerockband met korte lontjes, snelle gitaren en directe festivalenergie.", ["Ricochet", "Naughty", "Tube Spit"]],
+  ["Rise Against", "sun", "16.35 - 17.35", "Amerikaanse punkrockband met politieke teksten, melodische refreinen en stevige livekracht.", ["Savior", "Prayer of the Refugee", "Satellite"]],
+  ["A Perfect Circle", "sun", "18.20 - 19.20", "Alternatieve rockband rond Maynard James Keenan en Billy Howerdel, donker en gelaagd.", ["Judith", "3 Libras", "The Outsider"]],
+  ["Moby", "sun", "20.10 - 21.40", "Elektronische pionier die dance, gospel, ambient en pop wereldwijd toegankelijk maakte.", ["Porcelain", "Natural Blues", "Why Does My Heart Feel So Bad?"]],
+  ["The Cure", "sun", "22.30 - 0.45", "Britse postpunk- en gothrocklegende rond Robert Smith, met melancholie en tijdloze hooks.", ["Friday I'm In Love", "Boys Don't Cry", "Just Like Heaven"]]
+].map(([name, day, time, bio, songs]) => ({ name, day, time, bio, songs }));
 
-function renderPhotos(filter = "all") {
-  grid.innerHTML = "";
-  photos
-    .filter(photo => filter === "all" || photo.day === filter)
-    .forEach((photo, index) => {
-      const button = document.createElement("button");
-      button.className = "photo";
-      button.type = "button";
-      button.innerHTML = `
-        <img src="${photo.src}" alt="${photo.title}" loading="lazy">
-        <figcaption>
-          <strong>${photo.title}</strong>
-          <span>${photo.meta}</span>
-        </figcaption>
-      `;
-      button.addEventListener("click", () => openLightbox(photo));
-      grid.appendChild(button);
-    });
+const dayList = document.getElementById("dayList");
+const stageList = document.getElementById("stageList");
+const artistFilters = document.getElementById("artistFilters");
+const artistLibrary = document.getElementById("artistLibrary");
+
+function spotifySearch(artist, song) {
+  return `https://open.spotify.com/search/${encodeURIComponent(`${artist} ${song}`)}`;
 }
 
-function openLightbox(photo) {
-  lightboxImage.src = photo.src;
-  lightboxImage.alt = photo.title;
-  lightboxTitle.textContent = photo.title;
-  lightboxMeta.textContent = photo.meta;
-  lightbox.classList.add("open");
-  document.body.classList.add("lightbox-open");
+function renderProgram(dayKey = "thu") {
+  const selected = program.find(day => day.key === dayKey) || program[0];
+  dayList.innerHTML = program.map(day => `
+    <button class="daybtn ${day.key === selected.key ? "active" : ""}" data-day="${day.key}">
+      ${day.label}<span>${Object.values(day.stages).flat().length} optredens · officiële timetable</span>
+    </button>
+  `).join("");
+  stageList.innerHTML = Object.entries(selected.stages).map(([stage, slots]) => `
+    <article class="stage">
+      <h3>${stage}</h3>
+      ${slots.map(([time, artist]) => `
+        <div class="slot">
+          <div class="time">${time}</div>
+          <div class="artist">${artist}${stage === "Main Stage" ? `<small><a href="#mainstage" data-jump="${artist}">Bekijk Main Stage-bio + Spotify</a></small>` : ""}</div>
+        </div>
+      `).join("")}
+    </article>
+  `).join("");
+  document.querySelectorAll(".daybtn").forEach(button => button.addEventListener("click", () => renderProgram(button.dataset.day)));
+  document.querySelectorAll("[data-jump]").forEach(link => link.addEventListener("click", () => {
+    setTimeout(() => highlightArtist(link.dataset.jump), 80);
+  }));
 }
 
-function closeModal() {
-  lightbox.classList.remove("open");
-  document.body.classList.remove("lightbox-open");
+function renderArtistFilters(active = "all") {
+  const filters = [["all", "Alles"], ["thu", "Donderdag"], ["fri", "Vrijdag"], ["sat", "Zaterdag"], ["sun", "Zondag"]];
+  artistFilters.innerHTML = filters.map(([key, label]) => `<button class="filter ${key === active ? "active" : ""}" data-artist-day="${key}">${label}</button>`).join("");
+  document.querySelectorAll("[data-artist-day]").forEach(button => button.addEventListener("click", () => {
+    renderArtists(button.dataset.artistDay);
+  }));
 }
 
-buttons.forEach(button => {
-  button.addEventListener("click", () => {
-    buttons.forEach(item => item.classList.remove("active"));
-    button.classList.add("active");
-    renderPhotos(button.dataset.filter);
-  });
-});
+function renderArtists(day = "all") {
+  renderArtistFilters(day);
+  const filtered = artistInfo.filter(artist => day === "all" || artist.day === day);
+  artistLibrary.innerHTML = filtered.map(artist => `
+    <article class="artist-card" data-artist-card="${artist.name}">
+      <div class="meta">${program.find(d => d.key === artist.day).label} · Main Stage · ${artist.time}</div>
+      <h3>${artist.name}</h3>
+      <p>${artist.bio}</p>
+      <div class="songs">
+        ${artist.songs.map(song => `<a href="${spotifySearch(artist.name, song)}" target="_blank" rel="noopener">Spotify: ${song}</a>`).join("")}
+      </div>
+    </article>
+  `).join("");
+}
 
-closeLightbox.addEventListener("click", closeModal);
-lightbox.addEventListener("click", event => {
-  if (event.target === lightbox) closeModal();
-});
-document.addEventListener("keydown", event => {
-  if (event.key === "Escape") closeModal();
-});
+function highlightArtist(name) {
+  const card = document.querySelector(`[data-artist-card="${CSS.escape(name)}"]`);
+  if (!card) return;
+  card.scrollIntoView({ behavior: "smooth", block: "center" });
+  card.animate([{ outline: "3px solid #ffbf47" }, { outline: "3px solid transparent" }], { duration: 1600 });
+}
 
-renderPhotos();
+function inferPhotoCategory(filename, caption = "") {
+  const text = `${filename} ${caption}`.toLowerCase();
+  const artist = artistInfo.find(item => text.includes(item.name.toLowerCase()));
+  const stage = ["main stage", "the barn", "klub c", "nest", "towers", "magazijn"].find(item => text.includes(item));
+  const day = program.find(item => text.includes(item.label.toLowerCase().split(" ")[0]) || text.includes(item.key));
+  return {
+    day: day?.key || artist?.day || "te-controleren",
+    stage: artist ? "Main Stage" : stage || "te-controleren",
+    artist: artist?.name || "te-controleren",
+    confidence: artist ? "hoog" : "laag"
+  };
+}
+
+renderProgram();
+renderArtists();
+window.inferPhotoCategory = inferPhotoCategory;
 </script>
 </body>
 </html>
-
