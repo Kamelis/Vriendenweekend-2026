@@ -48,17 +48,17 @@ window.werchterPhotos = [
   {
     id: "werchter-upload-004",
     src: "artwork/werchter-upload-004.jpg",
-    title: "Rustmoment met uitzicht op het groen",
-    description: "Een festivalganger met zonnebril zit buiten aan een tafel en houdt een smartphone vast, met een open grasveld en wolkenlucht op de achtergrond.",
+    title: "Lenneke met uitzicht op het groen",
+    description: "Lenneke zit buiten aan een tafel met een smartphone en zonnebril, met een open grasveld en wolkenlucht op de achtergrond.",
     day: "te-controleren",
     date: "te-controleren",
     moment: "rustmoment",
     stage: "niet zichtbaar",
     artist: "niet van toepassing",
-    people: ["te-controleren"],
-    tags: ["buiten", "rustmoment", "smartphone", "zonnebril", "grasveld", "telegram-upload"],
+    people: ["Lenneke"],
+    tags: ["Lenneke", "buiten", "rustmoment", "smartphone", "zonnebril", "grasveld", "telegram-upload"],
     source: "telegram",
-    confidence: "medium"
+    confidence: "hoog"
   }
 ];
 
