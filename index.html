@@ -363,14 +363,14 @@ h1 {
     <p>Rock Werchter 2026 in een compacte festivalhub met het volledige programma, artiestenprofielen, Spotify-links naar bekende nummers en een foto-inbox die klaarstaat voor automatische tagging.</p>
     <div class="hero-actions">
       <a class="btn" href="#programma">Open programma</a>
-      <a class="btn secondary" href="#artiesten">Artiestenbibliografie</a>
+      <a class="btn secondary" href="photos.html">Open fotopagina</a>
     </div>
   </div>
   <div class="stats">
     <div class="stat"><b>Festival</b><span>Rock Werchter 2026</span></div>
     <div class="stat"><b>Dagen</b><span>2, 3, 4 en 5 juli</span></div>
     <div class="stat"><b>Stages</b><span>6 podia in het programma</span></div>
-    <div class="stat"><b>Versie</b><span>2.4.0</span></div>
+    <div class="stat"><b>Versie</b><span>2.5.0</span></div>
   </div>
 </header>
 
@@ -403,9 +403,9 @@ h1 {
     <div class="wrap">
       <div class="section-head">
         <h2>Foto-inbox</h2>
-        <p>Nieuwe uploads worden toegevoegd met dag, podium, artiest/personen en tags. Onzekere herkenning blijft zichtbaar als te controleren.</p>
+        <p>Nieuwe uploads worden op de aparte fotopagina geplaatst met filters voor dag, artiest, festivalganger en tags. Deze preview toont de nieuwste beelden.</p>
       </div>
-      <div class="photo-grid" id="photoGrid"></div>
+      <div class="photo-grid" id="photoGrid"></div>\n      <div class="hero-actions" style="margin-top:0"><a class="btn" href="photos.html">Bekijk alle foto\'s</a></div>
       <div class="photos-empty">
         <div class="drop">
           <div>
@@ -446,7 +446,7 @@ h1 {
 <footer class="footer">
   <div class="wrap">
     <span>Rock Werchter 2026 · programma & fotoarchief</span>
-    <span>Versie 2.4.0</span>
+    <span>Versie 2.5.0</span>
   </div>
 </footer>
 
@@ -593,41 +593,7 @@ function buildArtistInfo() {
 
 const artistInfo = buildArtistInfo();
 
-const photos = [
-  {
-    src: "artwork/werchter-upload-001.jpg",
-    title: "Vooravond in Rooi",
-    description: "Lenneke en Gale klinken met oranje drankjes op een terras in Rooi tijdens de vooravond van het Werchter-weekend.",
-    day: "maandag 29 juni",
-    stage: "niet van toepassing",
-    artist: "niet van toepassing",
-    people: "Lenneke (links) en Gale.",
-    tags: ["Rooi", "29 juni", "vooravond", "Lenneke", "Gale", "terras", "drankjes"],
-    confidence: "hoog"
-  },
-  {
-    src: "artwork/werchter-upload-002.jpg",
-    title: "Camping opbouw",
-    description: "Zonnige campingweide met tenten, caravans en auto's. Festivalgangers zijn bezig met het opzetten en inrichten van het kampement.",
-    day: "zondag 28 juni",
-    stage: "camping",
-    artist: "niet van toepassing",
-    people: "Meerdere personen zichtbaar bij tenten en campingmateriaal.",
-    tags: ["camping", "opbouw", "tenten", "caravan", "festivalcamping", "zomer"],
-    confidence: "hoog"
-  },
-  {
-    src: "artwork/werchter-upload-003.jpg",
-    title: "Festivalcamping met blauwe tenten",
-    description: "Tenten en caravans op een grasveld onder een heldere blauwe lucht, met een rustige campingsfeer bij de kampeerplek.",
-    day: "zondag 28 juni",
-    stage: "camping",
-    artist: "niet van toepassing",
-    people: "Enkele personen zichtbaar tussen de tenten en caravans.",
-    tags: ["camping", "tenten", "caravan", "festivalterrein", "zonnig", "kamperen"],
-    confidence: "hoog"
-  }
-];
+const photos = window.werchterPhotos || [];
 
 const dayList = document.getElementById("dayList");
 const stageList = document.getElementById("stageList");
