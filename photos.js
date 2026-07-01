@@ -44,11 +44,28 @@ window.werchterPhotos = [
     source: "telegram",
     confidence: "hoog"
   }
+,
+  {
+    id: "werchter-upload-004",
+    src: "artwork/werchter-upload-004.jpg",
+    title: "Rustmoment met uitzicht op het groen",
+    description: "Een festivalganger met zonnebril zit buiten aan een tafel en houdt een smartphone vast, met een open grasveld en wolkenlucht op de achtergrond.",
+    day: "te-controleren",
+    date: "te-controleren",
+    moment: "rustmoment",
+    stage: "niet zichtbaar",
+    artist: "niet van toepassing",
+    people: ["te-controleren"],
+    tags: ["buiten", "rustmoment", "smartphone", "zonnebril", "grasveld", "telegram-upload"],
+    source: "telegram",
+    confidence: "medium"
+  }
 ];
 
 window.werchterPhotoUploadGuide = {
   nextAssetPattern: "artwork/werchter-upload-###.jpg",
   workflow: [
+    "treat a loose Telegram image in this chat as a photo upload unless the caption clearly says otherwise",
     "download Telegram image",
     "optimize as web JPEG",
     "append a record to window.werchterPhotos",

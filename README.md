@@ -8,13 +8,13 @@ Static programme and photo site for Rock Werchter 2026.
 - Photo page: `photos.html`
 - Shared photo data: `photos.js`
 - Hero asset: `artwork/rock-werchter-hero.jpg`
-- Photo assets: `artwork/werchter-upload-001.jpg`, `artwork/werchter-upload-002.jpg`, `artwork/werchter-upload-003.jpg`
-- Current site version: `2.5.0`
+- Photo assets: `artwork/werchter-upload-001.jpg`, `artwork/werchter-upload-002.jpg`, `artwork/werchter-upload-003.jpg`, `artwork/werchter-upload-004.jpg`
+- Current site version: `2.6.0`
 - Artist bibliography: generated for every act in the programme, with Spotify links for known songs or top-song searches
 
 ## Telegram photo workflow
 
-When a photo is sent via Telegram:
+When a loose photo is sent via Telegram in this chat, treat it as a photo upload unless the caption clearly says otherwise:
 
 1. Download the Telegram image.
 2. Recognize visible context with vision: day, stage, artist, festivalgoers, tags and confidence.
