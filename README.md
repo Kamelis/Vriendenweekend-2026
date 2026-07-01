@@ -1,9 +1,3 @@
-Exit code: 0
-Wall time: 0.2 seconds
-Output:
-Exit code: 0
-Wall time: 0.2 seconds
-Output:
 # Rock Werchter 2026
 
 Static programme and photo site for Rock Werchter 2026.
@@ -27,3 +21,5 @@ When adding new photos, use image recognition to classify:
 - confidence
 
 Uncertain matches should be marked `te-controleren`.
+
+
