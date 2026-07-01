@@ -6,8 +6,8 @@ Static programme and photo site for Rock Werchter 2026.
 
 - Main page: `index.html`
 - Hero asset: `artwork/rock-werchter-hero.jpg`
-- Photo assets: none yet
-- Current site version: `2.2.0`
+- Photo assets: `artwork/werchter-upload-001.jpg`
+- Current site version: `2.3.0`
 - Artist bibliography: generated for every act in the programme, with Spotify links for known songs or top-song searches
 
 ## Future photo workflow
