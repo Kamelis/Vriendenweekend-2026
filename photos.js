@@ -59,21 +59,6 @@ window.werchterPhotos = [
     tags: ["Lenneke", "buiten", "rustmoment", "smartphone", "zonnebril", "grasveld", "telegram-upload"],
     source: "telegram",
     confidence: "hoog"
-  },
-  {
-    id: "werchter-upload-005",
-    src: "artwork/werchter-upload-005.jpg",
-    title: "Camping-selfie van Niels",
-    description: "Niels maakt een close-up selfie in een donkere slaapruimte of tent op de Werchter-camping.",
-    day: "donderdag 2 juli",
-    date: "2026-07-02",
-    moment: "campingmoment",
-    stage: "camping",
-    artist: "niet van toepassing",
-    people: ["Niels"],
-    tags: ["Niels", "camping", "selfie", "slaapruimte", "tent", "Werchter camping", "telegram-upload"],
-    source: "telegram",
-    confidence: "hoog"
   }
 ];
 
