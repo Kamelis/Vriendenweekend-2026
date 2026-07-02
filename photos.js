@@ -89,6 +89,21 @@ window.werchterPhotos = [
     tags: ["groep", "Niels", "Lenneke", "vrienden", "bier", "terras", "overkapping", "Werchter"],
     source: "telegram",
     confidence: "hoog"
+  },
+  {
+    id: "werchter-upload-007",
+    src: "artwork/werchter-upload-007.jpg",
+    title: "Lenneke proost met een pintje",
+    description: "Lenneke houdt lachend een glas bier omhoog tijdens een ontspannen Werchter-moment.",
+    day: "donderdag 2 juli",
+    date: "2026-07-02",
+    moment: "proostmoment",
+    stage: "horeca / camping",
+    artist: "niet van toepassing",
+    people: ["Lenneke"],
+    tags: ["Lenneke", "bier", "proost", "portret", "horeca", "Werchter"],
+    source: "telegram",
+    confidence: "hoog"
   }
 ];
 
