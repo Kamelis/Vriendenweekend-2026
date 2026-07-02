@@ -10,7 +10,7 @@ Static programme and photo site for Rock Werchter 2026.
 - Artist images: `artist-images.js` with Wikimedia thumbnails where available and generated fallback tiles elsewhere
 - Hero asset: `artwork/rock-werchter-hero.jpg`
 - Photo assets: `artwork/werchter-upload-001.jpg`, `artwork/werchter-upload-002.jpg`, `artwork/werchter-upload-003.jpg`, `artwork/werchter-upload-004.jpg`, `artwork/werchter-upload-005.jpg`
-- Current site version: `2.9.2`
+- Current site version: `2.9.3`
 - Artist bibliography: generated for every act in the programme, with Spotify links for known songs or top-song searches
 
 ## Telegram photo workflow
@@ -23,6 +23,7 @@ When a loose photo is sent via Telegram in this chat, treat it as a photo upload
 4. Save it as `artwork/werchter-upload-###.jpg`.
 5. Append a record to `window.werchterPhotos` in `photos.js`.
 6. Bump the version and deploy to `main`.
+7. Newest photo uploads render first on the home preview and photo page.
 
 Uncertain matches should be marked `te-controleren`.
 
