@@ -134,6 +134,21 @@ window.werchterPhotos = [
     tags: ["Main Stage", "publiek", "concert", "podium", "festivalterrein", "Werchter"],
     source: "telegram",
     confidence: "medium"
+  },
+  {
+    id: "werchter-upload-010",
+    src: "artwork/werchter-upload-010.jpg",
+    title: "Festivalvriendinnen met oordoppen",
+    description: "Lenneke en een vriendin lachen samen op het festivalterrein met felgekleurde oordoppen en een drankje in de hand.",
+    day: "donderdag 2 juli",
+    date: "2026-07-02",
+    moment: "portretmoment",
+    stage: "festivalterrein",
+    artist: "niet van toepassing",
+    people: ["Lenneke", "vriendin"],
+    tags: ["Lenneke", "vriendin", "oordoppen", "portret", "bier", "festivalterrein", "Werchter"],
+    source: "telegram",
+    confidence: "medium"
   }
 ];
 
