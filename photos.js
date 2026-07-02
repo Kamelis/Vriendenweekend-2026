@@ -104,6 +104,21 @@ window.werchterPhotos = [
     tags: ["Lenneke", "bier", "proost", "portret", "horeca", "Werchter"],
     source: "telegram",
     confidence: "hoog"
+  },
+  {
+    id: "werchter-upload-008",
+    src: "artwork/werchter-upload-008.jpg",
+    title: "Selfie van Niels en Lenneke",
+    description: "Niels en Lenneke lachen samen onder een overkapping bij het festivalterrein.",
+    day: "donderdag 2 juli",
+    date: "2026-07-02",
+    moment: "selfie",
+    stage: "horeca / festivalterrein",
+    artist: "niet van toepassing",
+    people: ["Niels", "Lenneke"],
+    tags: ["Niels", "Lenneke", "selfie", "overkapping", "festivalterrein", "Werchter"],
+    source: "telegram",
+    confidence: "hoog"
   }
 ];
 

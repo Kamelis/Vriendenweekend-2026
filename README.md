@@ -9,8 +9,8 @@ Static programme and photo site for Rock Werchter 2026.
 - Shared photo data: `photos.js`
 - Artist images: `artist-images.js` with Wikimedia thumbnails where available and generated fallback tiles elsewhere
 - Hero asset: `artwork/rock-werchter-hero.jpg`
-- Photo assets: `artwork/werchter-upload-001.jpg`, `artwork/werchter-upload-002.jpg`, `artwork/werchter-upload-003.jpg`, `artwork/werchter-upload-004.jpg`, `artwork/werchter-upload-005.jpg`, `artwork/werchter-upload-006.jpg`, `artwork/werchter-upload-007.jpg`
-- Current site version: `2.9.5`
+- Photo assets: `artwork/werchter-upload-001.jpg`, `artwork/werchter-upload-002.jpg`, `artwork/werchter-upload-003.jpg`, `artwork/werchter-upload-004.jpg`, `artwork/werchter-upload-005.jpg`, `artwork/werchter-upload-006.jpg`, `artwork/werchter-upload-007.jpg`, `artwork/werchter-upload-008.jpg`
+- Current site version: `2.9.6`
 - Artist bibliography: generated for every act in the programme, with Spotify links for known songs or top-song searches
 
 ## Telegram photo workflow
