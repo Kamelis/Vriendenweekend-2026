@@ -164,6 +164,21 @@ window.werchterPhotos = [
     tags: ["Lenneke", "Frans", "Main Stage", "publiek", "rustmoment", "festivalterrein", "Werchter"],
     source: "telegram",
     confidence: "hoog"
+  },
+  {
+    id: "werchter-upload-012",
+    src: "artwork/werchter-upload-012.jpg",
+    title: "Groepsselfie aan de biertafel",
+    description: "Niels en vrienden zitten samen aan een biertafel op het festivalterrein in de avondzon.",
+    day: "donderdag 2 juli",
+    date: "2026-07-02",
+    moment: "groepsmoment",
+    stage: "festivalterrein",
+    artist: "niet van toepassing",
+    people: ["Niels", "vrienden"],
+    tags: ["Niels", "vrienden", "groep", "bier", "terras", "avondzon", "festivalterrein", "Werchter"],
+    source: "telegram",
+    confidence: "hoog"
   }
 ];
 
