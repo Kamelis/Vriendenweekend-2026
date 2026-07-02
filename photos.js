@@ -299,6 +299,36 @@ window.werchterPhotos = [
     tags: ["vrienden", "barrier", "humor", "slapen", "groepsfoto", "Werchter"],
     source: "telegram",
     confidence: "hoog"
+  },
+  {
+    id: "werchter-upload-021",
+    src: "artwork/werchter-upload-021.jpg",
+    title: "Bandoptreden met blauwe backdrop",
+    description: "Een band speelt op een groot podium voor een volle festivalweide, met felblauwe achtergrondverlichting.",
+    day: "donderdag 2 juli",
+    date: "2026-07-02",
+    moment: "concertmoment",
+    stage: "Main Stage",
+    artist: "te-controleren",
+    people: ["bandleden", "festivalgangers"],
+    tags: ["Main Stage", "concert", "live muziek", "band", "publiek", "blauwe belichting", "Werchter"],
+    source: "telegram",
+    confidence: "medium"
+  },
+  {
+    id: "werchter-upload-022",
+    src: "artwork/werchter-upload-022.jpg",
+    title: "Publiek voor de Main Stage",
+    description: "Brede festivalweide met publiek voor het hoofdpodium tijdens een liveoptreden op Rock Werchter.",
+    day: "donderdag 2 juli",
+    date: "2026-07-02",
+    moment: "concertmoment",
+    stage: "Main Stage",
+    artist: "te-controleren",
+    people: ["festivalgangers"],
+    tags: ["Main Stage", "publiek", "festivalweide", "live concert", "zomerfestival", "Werchter"],
+    source: "telegram",
+    confidence: "hoog"
   }
 ];
 
