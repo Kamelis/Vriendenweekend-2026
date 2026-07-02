@@ -179,6 +179,21 @@ window.werchterPhotos = [
     tags: ["Niels", "vrienden", "groep", "bier", "terras", "avondzon", "festivalterrein", "Werchter"],
     source: "telegram",
     confidence: "hoog"
+  },
+  {
+    id: "werchter-upload-013",
+    src: "artwork/werchter-upload-013.jpg",
+    title: "Gale, Lenneke en Ko in de avondzon",
+    description: "Gale, Lenneke en Ko zitten van links naar rechts samen aan een festivaltafel bij de eetkraampjes in de avondzon.",
+    day: "donderdag 2 juli",
+    date: "2026-07-02",
+    moment: "groepsmoment",
+    stage: "festivalterrein",
+    artist: "niet van toepassing",
+    people: ["Gale", "Lenneke", "Ko"],
+    tags: ["Gale", "Lenneke", "Ko", "groep", "terras", "avondzon", "eetkraampjes", "Werchter"],
+    source: "telegram",
+    confidence: "hoog"
   }
 ];
 
