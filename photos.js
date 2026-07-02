@@ -149,6 +149,21 @@ window.werchterPhotos = [
     tags: ["Lenneke", "vriendin", "oordoppen", "portret", "bier", "festivalterrein", "Werchter"],
     source: "telegram",
     confidence: "medium"
+  },
+  {
+    id: "werchter-upload-011",
+    src: "artwork/werchter-upload-011.jpg",
+    title: "Lenneke bij de Main Stage met Frans",
+    description: "Lenneke en Frans bij de Main Stage tijdens een ontspannen moment tussen het publiek.",
+    day: "donderdag 2 juli",
+    date: "2026-07-02",
+    moment: "rustmoment",
+    stage: "Main Stage",
+    artist: "niet van toepassing",
+    people: ["Lenneke", "Frans"],
+    tags: ["Lenneke", "Frans", "Main Stage", "publiek", "rustmoment", "festivalterrein", "Werchter"],
+    source: "telegram",
+    confidence: "hoog"
   }
 ];
 
