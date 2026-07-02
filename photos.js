@@ -119,6 +119,21 @@ window.werchterPhotos = [
     tags: ["Niels", "Lenneke", "selfie", "overkapping", "festivalterrein", "Werchter"],
     source: "telegram",
     confidence: "hoog"
+  },
+  {
+    id: "werchter-upload-009",
+    src: "artwork/werchter-upload-009.jpg",
+    title: "Main Stage met publiek",
+    description: "Uitzicht op de Main Stage van Rock Werchter met publiek op de voorgrond en de show op het podium.",
+    day: "donderdag 2 juli",
+    date: "2026-07-02",
+    moment: "concertmoment",
+    stage: "Main Stage",
+    artist: "te-controleren",
+    people: ["festivalgangers"],
+    tags: ["Main Stage", "publiek", "concert", "podium", "festivalterrein", "Werchter"],
+    source: "telegram",
+    confidence: "medium"
   }
 ];
 
