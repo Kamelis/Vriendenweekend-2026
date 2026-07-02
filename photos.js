@@ -59,6 +59,21 @@ window.werchterPhotos = [
     tags: ["Lenneke", "buiten", "rustmoment", "smartphone", "zonnebril", "grasveld", "telegram-upload"],
     source: "telegram",
     confidence: "hoog"
+  },
+  {
+    id: "werchter-upload-005",
+    src: "artwork/werchter-upload-005.jpg",
+    title: "Campingtafel bij de tenten",
+    description: "Lenneke zit op de Werchter-camping achter een tafel met flessen en kampeerspullen, tussen de tenten en partytent.",
+    day: "donderdag 2 juli",
+    date: "2026-07-02",
+    moment: "campingmoment",
+    stage: "camping",
+    artist: "niet van toepassing",
+    people: ["Lenneke"],
+    tags: ["camping", "Lenneke", "tenten", "partytent", "campingtafel", "drankjes", "Werchter"],
+    source: "telegram",
+    confidence: "hoog"
   }
 ];
 
