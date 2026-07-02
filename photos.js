@@ -74,6 +74,21 @@ window.werchterPhotos = [
     tags: ["camping", "Lenneke", "tenten", "partytent", "campingtafel", "drankjes", "Werchter"],
     source: "telegram",
     confidence: "hoog"
+  },
+  {
+    id: "werchter-upload-006",
+    src: "artwork/werchter-upload-006.jpg",
+    title: "Biermoment met de groep",
+    description: "Niels, Lenneke en vrienden zitten samen aan een tafel met bier onder een overkapping tijdens het Werchter-weekend.",
+    day: "donderdag 2 juli",
+    date: "2026-07-02",
+    moment: "groepsmoment",
+    stage: "horeca / camping",
+    artist: "niet van toepassing",
+    people: ["Niels", "Lenneke", "vrienden"],
+    tags: ["groep", "Niels", "Lenneke", "vrienden", "bier", "terras", "overkapping", "Werchter"],
+    source: "telegram",
+    confidence: "hoog"
   }
 ];
 
