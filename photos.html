@@ -280,13 +280,13 @@ h1 {
 <footer class="footer">
   <div class="wrap">
     <span>Rock Werchter 2026 · fotoarchief</span>
-    <span>Versie 2.9.2</span>
+    <span>Versie 2.9.3</span>
   </div>
 </footer>
 
 <script src="photos.js"></script>
 <script>
-const photos = window.werchterPhotos || [];
+const photos = (window.werchterPhotos || []).slice().sort((a, b) => (b.id || "").localeCompare(a.id || "", "nl", { numeric: true }));
 const active = new Map();
 const searchInput = document.getElementById("search");
 const photoGrid = document.getElementById("photoGrid");
